@@ -3,12 +3,18 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f4f4f4;
 }
 
 .navbar {
-  background-color: #333;
+  background-color: #767dda;
   color: white;
   padding: 1em 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar ul {
@@ -16,6 +22,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .navbar ul li {
@@ -25,18 +32,39 @@ body {
 .navbar ul li a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #f4f4f4;
 }
 
 section {
-  padding: 2em;
+  padding: 5em 2em 2em 2em;
   text-align: center;
+  min-height: 100vh;
 }
 
-.home {
-  background-color: #f4f4f4;
+.home, .about, .projects, .contact {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about, .projects, .contact {
-  background-color: #e2e2e2;
-  margin-top: 1em;
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
 }
