@@ -1,7 +1,84 @@
-.home .container {
-  background-color: white;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap');
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #989ef3;
+}
+
+.container {
+  background-color: #87CEFA;
   border-radius: 8px;
   padding: 2em;
-  margin: 2em auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2em;
+  max-width: 800px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Apply the imported font */
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.profile h2 {
+  margin: 0.5em 0;
+  font-family: 'Lobster', cursive; /* Use a different font for the name */
+  font-size: 2.5em; /* Increase the font size */
+}
+
+.profile h4 {
+  margin: 0.5em 0;
+  color: #666;
+  font-size: 1.5em; /* Increase the font size */
+  font-weight: bold; /* Make the font thicker */
+}
+
+.profile p {
+  margin: 0.5em 0;
+  font-size: 1.2em; /* Increase the font size */
+  font-weight: 700; /* Make the font thicker */
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.skill {
+  background-color: #87CEFA;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  font-size: 1em;
+  font-weight: bold; /* Make the font thicker */
+  transition: background-color 0.3s;
+}
+
+.skill:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.education {
+  margin-top: 2em;
+}
+
+.education p {
+  font-size: 1.2em; /* Increase the font size */
+  font-weight: 700; /* Make the font thicker */
+}
+
+.education img {
+  width: 100px;
+  height: auto;
+  margin-top: 1em;
 }

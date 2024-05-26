@@ -2,7 +2,7 @@
   text-align: center;
   padding: 5em 2em;
   min-height: 100vh;
-  background-color: #e2e2e2;
+  background-color: #989ef3;
 }
 
 .container {
@@ -43,7 +43,7 @@
   width: 100%;
   padding: 0.5em;
   margin-top: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #989ef3;
   border-radius: 4px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .contact-form-container button:hover {
-  background-color: #555;
+  background-color: #989ef3;
 }
 
 .footer {

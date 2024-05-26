@@ -4,4 +4,115 @@
   padding: 2em;
   margin: 2em auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+  border-radius: 70%;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-content h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.experience-content h3 img {
+  margin-right: 10px;
+}
+
+.role {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.role h4 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+.role span {
+  display: block;
+  font-size: 0.9em;
+  color: #777;
+  text-align: left;
+}
+
+.role p {
+  font-size: 1em;
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+.projects {
+  margin-top: 2em;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.project-button {
+  display: block;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0.5em 0;
+  font-size: 1.2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-details {
+  display: none;
+  padding: 1em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 0.5em;
+}
+
+.project-details.active {
+  display: block;
+}
+
+.project-details ul {
+  padding-left: 20px; /* Indentation for bullets */
+}
+
+.project-details li {
+  text-align: left; /* Align text to the left */
+  margin-bottom: 0.5em; /* Spacing between list items */
+}
+
+.project-details img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-top: 1em;
+  border-radius: 8px;
 }
