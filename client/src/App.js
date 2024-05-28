@@ -19,11 +19,12 @@ function App() {
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes location={location}>
             <Route path="/" element={<Home />} />
+            <Route path="/About-Me" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={() => {
-              window.location.href = '/resume.pdf';
+              window.location.href = '/Piran Aminullah Resume.pdf';
               return null;
             }} />
           </Routes>
