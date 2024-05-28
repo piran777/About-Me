@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1fbc1415.css",
-    "main.js": "/static/js/main.88046a61.js",
+    "main.js": "/static/js/main.0e2bed62.js",
     "static/media/TrafficAIProject.PNG": "/static/media/TrafficAIProject.49fe8600609661198d79.PNG",
     "static/media/edit3blog.PNG": "/static/media/edit3blog.bf5a5c15eacd2d1e4990.PNG",
     "static/media/LoggedInBLog.PNG": "/static/media/LoggedInBLog.79b4fd16e24bf5d2a43b.PNG",
@@ -23,10 +23,10 @@
     "static/media/mazegame-3.PNG": "/static/media/mazegame-3.a78c52f4604a5a686c92.PNG",
     "index.html": "/index.html",
     "main.1fbc1415.css.map": "/static/css/main.1fbc1415.css.map",
-    "main.88046a61.js.map": "/static/js/main.88046a61.js.map"
+    "main.0e2bed62.js.map": "/static/js/main.0e2bed62.js.map"
   },
   "entrypoints": [
     "static/css/main.1fbc1415.css",
-    "static/js/main.88046a61.js"
+    "static/js/main.0e2bed62.js"
   ]
 }
