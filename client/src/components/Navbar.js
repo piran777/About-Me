@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="navbar-content">
         <Link to="/contact" className="cta-button">Let's Connect</Link>
         <ul className="nav-links">
-          <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
+          <li><NavLink to="/About-Me" exact activeClassName="active">Home</NavLink></li>
           <li><NavLink to="/about" activeClassName="active">Experience</NavLink></li>
           <li><a href="/Piran Aminullah Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
           <li><NavLink to="/contact" activeClassName="active">Contact</NavLink></li>
