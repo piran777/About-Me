@@ -83,7 +83,7 @@ const projects = [
       'Had different enemy types in each level with AOE detection/shooting, target tracking and different characters which use different abilities in the game.',
       'Utilized: C#, Unity'
     ],
-    video: 'https://www.youtube.com/embed/0qLVyk-RBxg', // Corrected YouTube embed link
+    video: 'https://www.youtube.com/embed/ZxHu8RLDSTE', // Corrected YouTube embed link
     images: [maze2,maze3,maze4,maze5], // Replace with appropriate images
     
   },
