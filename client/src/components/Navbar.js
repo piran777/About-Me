@@ -13,7 +13,7 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">Experience</Link></li>
           <li><a href="/Piran Aminullah Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-          <li><Link to="/projects">Projects</Link></li>
+          {/* <li><Link to="/projects">Projects</Link></li> */}
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className="nav-right">

@@ -8,7 +8,7 @@
 }
 
 .about h2 {
-  text-align: center;
+  text-align: left;
   font-size: 2em;
   margin-bottom: 1em;
 }
@@ -68,10 +68,11 @@
 
 .projects {
   margin-top: 2em;
+  background-color: white;
 }
 
 .projects h2 {
-  text-align: center;
+  text-align: left;
   font-size: 2em;
   margin-bottom: 1em;
 }
