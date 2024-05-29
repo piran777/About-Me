@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
+import ResumeRedirect from './components/ResumeRedirect';
 
 function App() {
   const location = useLocation();
@@ -20,17 +21,14 @@ function App() {
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/About-Me" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/resume" element={() => {
-              window.location.href = '/Piran Aminullah Resume.pdf';
-              return null;
-            }} />
+            <Route path="/About-Me/about" element={<About />} />
+            <Route path="/About-Me/projects" element={<Projects />} />
+            <Route path="/About-Me/contact" element={<Contact />} />
+            <Route path="/About-Me/resume" element={<ResumeRedirect />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-    
+      
     </div>
   );
 }
