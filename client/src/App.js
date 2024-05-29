@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Resume from './components/Resume'; // Import the Resume component
+
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Navbar />
       <TransitionGroup>
+        
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes location={location}>
             <Route path="/" element={<Home />} />
