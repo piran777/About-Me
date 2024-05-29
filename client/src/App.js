@@ -7,8 +7,8 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Resume from './components/Resume'; // Import the Resume component
 import './App.css';
-import ResumeRedirect from './components/ResumeRedirect';
 
 function App() {
   const location = useLocation();
@@ -24,7 +24,7 @@ function App() {
             <Route path="/About-Me/about" element={<About />} />
             <Route path="/About-Me/projects" element={<Projects />} />
             <Route path="/About-Me/contact" element={<Contact />} />
-            <Route path="/About-Me/resume" element={<ResumeRedirect />} />
+            <Route path="/About-Me/resume" element={<Resume />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
