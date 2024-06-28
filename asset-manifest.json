@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/About-Me/static/css/main.4c17f8df.css",
+    "main.css": "/About-Me/static/css/main.7436db33.css",
     "main.js": "/About-Me/static/js/main.bfda3975.js",
     "static/media/TrafficAIProject.PNG": "/About-Me/static/media/TrafficAIProject.49fe8600609661198d79.PNG",
     "static/media/edit3blog.PNG": "/About-Me/static/media/edit3blog.bf5a5c15eacd2d1e4990.PNG",
@@ -22,11 +22,11 @@
     "static/media/blog-login.PNG": "/About-Me/static/media/blog-login.d002b1435abb507d6e11.PNG",
     "static/media/mazegame-3.PNG": "/About-Me/static/media/mazegame-3.a78c52f4604a5a686c92.PNG",
     "index.html": "/About-Me/index.html",
-    "main.4c17f8df.css.map": "/About-Me/static/css/main.4c17f8df.css.map",
+    "main.7436db33.css.map": "/About-Me/static/css/main.7436db33.css.map",
     "main.bfda3975.js.map": "/About-Me/static/js/main.bfda3975.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c17f8df.css",
+    "static/css/main.7436db33.css",
     "static/js/main.bfda3975.js"
   ]
 }
