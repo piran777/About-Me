@@ -2,7 +2,7 @@
   text-align: center;
   padding: 5em 2em;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #fdfdfd;
 }
 
 .container {
@@ -58,7 +58,7 @@
 }
 
 .contact-form-container button:hover {
-  background-color: #ffffff;
+  background-color: #004181;
 }
 
 .footer {
