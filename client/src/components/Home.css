@@ -5,11 +5,11 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #989ef3;
+  background-color: #ffffff;
 }
 
 .container {
-  background-color: #87CEFA;
+  background-color: #000000;
   border-radius: 8px;
   padding: 2em;
   margin: 2em;
@@ -33,7 +33,7 @@
 
 .profile h4 {
   margin: 0.5em 0;
-  color: #666;
+  color: #667;
   font-size: 1.5em; /* Increase the font size */
   font-weight: bold; /* Make the font thicker */
 }
@@ -52,7 +52,7 @@
 }
 
 .skill {
-  background-color: #87CEFA;
+  background-color: #000000;
   color: white;
   border-radius: 20px;
   padding: 0.5em 1em;

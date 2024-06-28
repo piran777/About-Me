@@ -17,9 +17,26 @@ import music2 from '../Assets/music2.PNG';
 import maze2 from '../Assets/Maze-Game-diag.PNG'; 
 import maze3 from '../Assets/Maze-Game-Take hits.PNG'; 
 import maze4 from '../Assets/mazegame-3.PNG'; 
-import maze5 from '../Assets/maze-3.PNG'; 
+import maze5 from '../Assets/maze-3.PNG';
+import hicoderLogo from '../Assets/hicoder_logo.png'; 
 
 const experiences = [
+  {
+    company: 'HiCoder',
+    logo: hicoderLogo,
+    roles: [
+      {
+        title: 'Software Engineer Intern',
+        date: 'May 2024 - present',
+        description: [
+          'Led the design and development of scalable server-side applications using Node.js, enhancing performance and reliability.',
+          'Developed the client side using crema/react.js, ensuring a seamless and responsive user experience.',
+          'Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications.',
+          'Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience.'
+        ]
+      }
+    ]
+  },
   {
     company: 'PawmirPaintings LTD',
     logo: pawmirLogo,

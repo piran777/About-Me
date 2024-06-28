@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #87CEFA;
+  background-color: #004181;
   color: white;
   padding: 1em 2em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,7 @@
 
 .cta-button {
   background-color: white;
-  color: #87CEFA;
+  color: #000000;
   padding: 0.5em 1em;
   border-radius: 4px;
   text-decoration: none;
@@ -32,8 +32,8 @@
 }
 
 .cta-button:hover {
-  background-color: #989ef3;
-  color: #87CEFA;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .nav-links {
