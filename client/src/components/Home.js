@@ -196,24 +196,20 @@ const Home = () => {
               Junior Software Engineer at hyperPad
             </Typography>
             <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-              January 2025 - Current • London, ON
+              Jan 2025 - Current • London, ON
             </Typography>
             <Box component="ul" sx={{ pl: 2 }}>
               <Typography component="li" variant="body2" paragraph>
-                Developed key features for a financial platform serving 100,000+ professionals through a contracting project, 
-                including improving linked account visibility and modernizing form components for enhanced usability.
+                Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization.
               </Typography>
               <Typography component="li" variant="body2" paragraph>
-                Upgraded backend infrastructure by migrating a Ruby on Rails system to version 7, improving scalability and performance.
+                Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration.
               </Typography>
               <Typography component="li" variant="body2" paragraph>
-                Led internationalization efforts, translating platform content into 7 languages for global accessibility.
+                Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead.
               </Typography>
               <Typography component="li" variant="body2" paragraph>
-                Designed and implemented a schema management system, enhancing efficiency for administrators.
-              </Typography>
-              <Typography component="li" variant="body2">
-                Collaborated cross-functionally to roll out new features and automated tests, improving software reliability.
+                Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment.
               </Typography>
             </Box>
           </Card>
@@ -249,15 +245,16 @@ const Home = () => {
                   key={skill.name}
                   label={skill.name}
                   variant="filled"
-                  color={
-                    skill.category === 'frontend' ? 'primary' :
-                    skill.category === 'backend' ? 'secondary' :
-                    skill.category === 'language' ? 'success' :
-                    skill.category === 'database' ? 'info' :
-                    skill.category === 'devops' ? 'warning' :
-                    'default'
-                  }
-                  sx={{ m: 0.5, fontSize: '0.9rem' }}
+                  sx={{
+                    m: 0.5,
+                    fontSize: '1rem',
+                    backgroundColor: '#f5f5f5',
+                    color: '#222',
+                    border: '1px solid #e0e0e0',
+                    boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
+                    fontWeight: 500,
+                    letterSpacing: 0.2,
+                  }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={skillsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.1 + index * 0.03 }}

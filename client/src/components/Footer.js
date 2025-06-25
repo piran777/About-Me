@@ -17,43 +17,41 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} justifyContent="center" textAlign="center">
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
+        <Grid container spacing={4} alignItems="flex-start" justifyContent="space-between" direction={{ xs: 'column', md: 'row' }}>
+          <Grid item xs={12} md={4} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+            <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', mb: 1, mt: 0 }}>
               Piran Aminullah
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" sx={{ opacity: 0.85 }}>
               Software Engineer
             </Typography>
           </Grid>
-          
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
+          <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>
+            <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', mb: 1, mt: 0 }}>
               Quick Links
             </Typography>
-            <Stack direction="column" spacing={1} alignItems="center">
-              <Link component={RouterLink} to="/About-Me" color="inherit">Home</Link>
-              <Link component={RouterLink} to="/About-Me/about" color="inherit">Experience</Link>
-              <Link component={RouterLink} to="/About-Me/projects" color="inherit">Projects</Link>
-              <Link component={RouterLink} to="/About-Me/contact" color="inherit">Contact</Link>
-              <Link component={RouterLink} to="/About-Me/resume" color="inherit">Resume</Link>
-            </Stack>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap', mt: 1 }}>
+              <Link component={RouterLink} to="/About-Me" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Home</Link>
+              <Link component={RouterLink} to="/About-Me/about" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Experience</Link>
+              <Link component={RouterLink} to="/About-Me/projects" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Projects</Link>
+              <Link component={RouterLink} to="/About-Me/contact" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Contact</Link>
+              <Link component={RouterLink} to="/About-Me/resume" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Resume</Link>
+            </Box>
           </Grid>
-          
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
+          <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>
+            <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', mb: 1, mt: 0 }}>
               Connect
             </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mt: 1 }}>
               <IconButton 
                 component="a" 
                 href="https://github.com/piran777" 
                 target="_blank" 
                 color="inherit"
                 aria-label="GitHub"
-                sx={{ mx: 1 }}
+                sx={{ mx: 0.5, p: 1, transition: 'background 0.2s', '&:hover': { background: 'rgba(255,255,255,0.08)' } }}
               >
-                <GitHubIcon />
+                <GitHubIcon fontSize="medium" />
               </IconButton>
               <IconButton 
                 component="a" 
@@ -61,23 +59,20 @@ const Footer = () => {
                 target="_blank" 
                 color="inherit"
                 aria-label="LinkedIn"
-                sx={{ mx: 1 }}
+                sx={{ mx: 0.5, p: 1, transition: 'background 0.2s', '&:hover': { background: 'rgba(255,255,255,0.08)' } }}
               >
-                <LinkedInIcon />
+                <LinkedInIcon fontSize="medium" />
               </IconButton>
               <IconButton 
                 component={RouterLink} 
                 to="/About-Me/contact" 
                 color="inherit"
                 aria-label="Email"
-                sx={{ mx: 1 }}
+                sx={{ mx: 0.5, p: 1, transition: 'background 0.2s', '&:hover': { background: 'rgba(255,255,255,0.08)' } }}
               >
-                <EmailIcon />
+                <EmailIcon fontSize="medium" />
               </IconButton>
             </Box>
-            <Typography variant="body2" sx={{ mt: 2 }}>
-              London, Ontario, Canada
-            </Typography>
           </Grid>
         </Grid>
         

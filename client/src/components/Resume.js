@@ -90,7 +90,7 @@ const Resume = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    January 2025 - Current
+                    Jan 2025 - Current
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     London, ON
@@ -99,23 +99,20 @@ const Resume = () => {
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Developed key features for a financial platform serving 100,000+ professionals through a contracting project, including improving linked account visibility and modernizing form components for enhanced usability.
+                  Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization.
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Upgraded backend infrastructure by migrating a Ruby on Rails system to version 7, improving scalability and performance.
+                  Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration.
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Led internationalization efforts, translating platform content into 7 languages for global accessibility.
+                  Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead.
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Designed and implemented a schema management system, enhancing efficiency for administrators.
-                </Typography>
-                <Typography component="li" variant="body2">
-                  Collaborated cross-functionally to roll out new features and automated tests, improving software reliability.
+                  Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment.
                 </Typography>
               </Box>
               <Typography variant="body2" sx={{ mt: 1, fontStyle: 'italic' }}>
-                Technologies Used: Ruby on Rails 6/7, React.js, JavaScript, TypeScript, Cucumber rails, RSpec, Jest, ESBuild, Webpacker, Material-UI, Xcode, Docker, SCSS, HTML/CSS
+                Technologies Used: Ruby on Rails 6/7, React.js, JavaScript, TypeScript, i18n, GitLab, Cucumber, RSpec, Jest, Material-UI, Docker, AWS, Redux, Redis
               </Typography>
             </Box>
             
@@ -132,7 +129,7 @@ const Resume = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    September 2024 - January 2025
+                    Sept 2024 - Jan 2025
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     London, ON
@@ -141,13 +138,16 @@ const Resume = () => {
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to the latest frameworks and models to improve scalability and performance.
+                  Spearheaded backend infrastructure upgrades, migrating Ruby on Rails systems from version 6 to 7 while maintaining production stability for high-traffic financial applications.
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to improve scalability and performance.
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
                   Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms.
                 </Typography>
-                <Typography component="li" variant="body2">
-                  Led a development team in building multiple features, working directly with the client to gather requirements, incorporate feedback, and deliver tailored solutions on time and within scope.
+                <Typography component="li" variant="body2" paragraph>
+                  Gained foundational experience in full-stack development and client management, preparing for advanced financial platform contracting work.
                 </Typography>
               </Box>
             </Box>
@@ -165,7 +165,7 @@ const Resume = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    June 2024 - September 2024
+                    Jun 2024 - Sept 2024
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     Canada (Remote)
@@ -174,20 +174,17 @@ const Resume = () => {
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Led the design and development of scalable server-side applications using Node.js, enhancing performance and reliability.
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Developed the client side using crema/react.js, ensuring a seamless and responsive user experience.
+                  Led design and development of scalable server-side applications using Node.js, enhancing performance and reliability, while developing responsive client-side features using React.js.
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
                   Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications.
                 </Typography>
-                <Typography component="li" variant="body2">
+                <Typography component="li" variant="body2" paragraph>
                   Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience.
                 </Typography>
               </Box>
               <Typography variant="body2" sx={{ mt: 1, fontStyle: 'italic' }}>
-                Technologies Used: Node.js, Express.js, React.js, JavaScript, HTML, CSS, Crema (React UI Framework)
+                Technologies Used: Node.js, Express.js, React.js, JavaScript, HTML, CSS, Material UI/ThemeUI
               </Typography>
             </Box>
             
@@ -204,7 +201,7 @@ const Resume = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    April 2022 - September 2023
+                    Apr 2022 - Sept 2023
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     London, ON
@@ -213,18 +210,12 @@ const Resume = () => {
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Collaborated with a diverse team of developers, actively contributing ideas and insights for website development.
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
                   Built the company's website through the integration of JavaScript, CSS, and HTML, leading to enhanced user interaction and navigation.
                 </Typography>
-                <Typography component="li" variant="body2">
+                <Typography component="li" variant="body2" paragraph>
                   Implemented a robust contact information section using Node.js/Express, addressing user issues promptly.
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={{ mt: 1, fontStyle: 'italic' }}>
-                Technologies Used: Node.js, Express.js, JavaScript, HTML, CSS
-              </Typography>
             </Box>
           </Box>
           

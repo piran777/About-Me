@@ -34,6 +34,7 @@ import blog1 from '../Assets/blog-login.PNG';
 import blog2 from '../Assets/LoggedInBLog.PNG';
 import music1 from '../Assets/music-1.PNG'; 
 import maze2 from '../Assets/Maze-Game-diag.PNG'; 
+import topoolgy from '../Assets/topoolgy.png';
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
@@ -41,54 +42,67 @@ const MotionCard = motion(Card);
 const projects = [
   {
     id: 1,
-    title: 'Traffic Density Predictor',
-    description: 'An ML-powered tool to predict traffic patterns and optimize route planning',
+    title: 'Intelligent Traffic Management System',
+    description: 'ML traffic prediction system for intersections. Uses random forest, heat maps, and Google Maps API integration.',
     image: trafficImage,
     details: [
-      'Engineered a machine learning model that predicts the traffic density at an intersection using a random forest classifier and to accurately forecast congestion patterns and optimize route planning.',
-      'Developed an advanced heat map algorithm in Python to predict high-traffic areas in London, Ontario so that it can be placed on a google maps UI.',
+      'Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning.',
+      'Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization.'
     ],
     technologies: ['Python', 'Pandas', 'Streamlit', 'Git', 'Jira/Confluence'],
-    videoUrl: 'https://www.youtube.com/embed/Xrf8B0IFcyI',
-    githubUrl: 'https://github.com/piran777'
+    videoUrl: null,
+    githubUrl: 'https://github.com/piran777/Capstone'
   },
   {
     id: 2,
-    title: 'MyBlog',
-    description: 'A full-stack blogging platform with user authentication and CRUD operations',
+    title: 'ContentCraft - Full-Stack Publishing Platform',
+    description: 'Full-stack content platform with user auth. Role-based access, dynamic posts, and secure editing features.',
     image: blog1,
     details: [
-      'Designed the front-end using React, providing a responsive and user-friendly interface with a RESTful API using Node.js and Express for handling CRUD operations on blog posts in the back-end',
-      'User authentication and authorization using JSON Web Tokens (JWT) is used for secure access to the platform.',
-      'Used docker and kubernetes to dockerize the application in order to deploy it using GCP',
-      'Created full documentation of the program which explains the code and functionality of the program in a ReadMe.',
+      'Engineered a comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities.',
+      'Implemented secure user registration, JWT authentication, and database-driven commenting system with content tagging functionality.',
+      'Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction.'
     ],
-    technologies: ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'Docker', 'Kubernetes', 'JWT'],
+    technologies: ['JavaScript', 'React.js', 'Node.js/Express', 'Authentication Middleware', 'Database Integration', 'RESTful APIs'],
     videoUrl: null,
-    githubUrl: 'https://github.com/piran777'
+    githubUrl: 'https://github.com/piran777/Full-Stack-Blogging-Platform'
   },
   {
     id: 3,
+    title: 'NetSim - Network Protocol Analysis & Simulation',
+    description: 'Network protocol analysis and simulation. Multi-host Mininet, deep packet analysis, and Python tools.',
+    image: topoolgy,
+    details: [
+      'Designed and implemented a multi-host network topology using Mininet with three hosts and one switch for comprehensive protocol testing.',
+      'Developed UDP/TCP communication protocols and performed deep packet analysis using Wireshark for network optimization.',
+      'Created Python-based network simulation tools to analyze traffic patterns and protocol efficiency in controlled environments.'
+    ],
+    technologies: ['Python', 'Wireshark', 'Mininet', 'Network Programming', 'Protocol Analysis', 'Systems Programming'],
+    videoUrl: null,
+    githubUrl: 'https://github.com/piran777/UDP-TCP-Networking'
+  },
+  {
+    id: 4,
     title: 'Maze World',
-    description: 'A 2D maze game with multiple levels built in Unity',
+    description: '2D maze game with multiple levels built in Unity. Features enemy types, AOE detection, and unique abilities.',
     image: maze2,
     details: [
       'Made a 2D maze game with 3 levels using Unity and C# to create the levels for the game and to give movement and actions to the characters within the game using the C# scripts',
-      'Had different enemy types in each level with AOE detection/shooting, target tracking and different characters which use different abilities in the game.',
+      'Had different enemy types in each level with AOE detection/shooting, target tracking and different characters which use different abilities in the game.'
     ],
     technologies: ['C#', 'Unity'],
     videoUrl: 'https://www.youtube.com/embed/ZxHu8RLDSTE',
     githubUrl: 'https://github.com/piran777'
   },
   {
-    id: 4,
+    id: 5,
     title: 'MyMusicPlayer',
-    description: 'A music streaming app with playlist management and YouTube integration',
+    description: 'Music streaming app with playlist management. User authentication, search, and playlist editing features.',
     image: music1,
     details: [
-      'Audio streaming app that can create, update, and delete playlists by adding songs and playing them directly from youtube for logged in users.',
-      'Search by artists, albums, or songs names to find the track and add it to a playlist or to remove it from an existing one',
-      'Account creation, verification, deletion, deactivation, and authentication with JWT is integrated. Users that are logged in with an account have more features than guests that have no account.',
+      'Audio streaming app that can create, update, and delete playlists by adding songs for logged in users.',
+      'Search by artists, albums, or songs names to find the track and add it to a playlist or to remove it from an existing one.',
+      'Account creation, verification, deletion, deactivation, and authentication with JWT is integrated. Users that are logged in with an account have more features than guests that have no account.'
     ],
     technologies: ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MySQL', 'AWS', 'JWT'],
     videoUrl: null,
@@ -146,83 +160,115 @@ const Projects = () => {
           animate={projectsInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <Grid container spacing={4}>
+          <Box sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
+            gap: 4,
+          }}>
             {projects.map((project, index) => (
-              <Grid item xs={12} sm={6} md={6} key={project.id}>
-                <MotionCard 
-                  sx={{ 
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    boxShadow: theme.shadows.small,
-                    borderRadius: 2,
-                    overflow: 'hidden',
-                    transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
-                    '&:hover': {
-                      transform: 'translateY(-8px)',
-                      boxShadow: theme.shadows.medium
-                    }
-                  }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={projectsInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={project.image}
-                    alt={project.title}
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 600 }}>
-                      {project.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" paragraph>
-                      {project.description}
-                    </Typography>
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mb: 2 }}>
-                      {project.technologies.slice(0, 4).map((tech) => (
-                        <Chip 
-                          key={tech} 
-                          label={tech} 
-                          size="small" 
-                          variant="outlined"
-                          color="primary"
-                          sx={{ mr: 0.5, mb: 0.5 }}
-                        />
-                      ))}
-                      {project.technologies.length > 4 && (
-                        <Chip 
-                          label={`+${project.technologies.length - 4}`} 
-                          size="small"
-                          sx={{ mr: 0.5, mb: 0.5 }}
-                        />
-                      )}
-                    </Box>
-                  </CardContent>
-                  <CardActions sx={{ p: 2, pt: 0 }}>
-                    <Button 
-                      size="small" 
-                      startIcon={<CodeIcon />}
-                      onClick={() => handleOpenDialog(project)}
-                    >
-                      Learn More
-                    </Button>
-                    {project.githubUrl && (
-                      <Button 
-                        size="small" 
-                        startIcon={<GitHubIcon />}
-                        href={project.githubUrl}
-                        target="_blank"
+              <MotionCard
+                key={project.id}
+                sx={{
+                  height: 300,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'flex-start',
+                  boxShadow: theme.shadows.small,
+                  borderRadius: 2,
+                  overflow: 'hidden',
+                  transition: 'transform 0.3s, box-shadow 0.3s',
+                  '&:hover': {
+                    transform: 'translateY(-8px)',
+                    boxShadow: theme.shadows.medium
+                  }
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={projectsInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <CardMedia
+                  component="img"
+                  image={project.image}
+                  alt={project.title}
+                  sx={{ height: 100, width: '100%', objectFit: 'cover' }}
+                />
+                <CardContent sx={{ flex: '1 1 0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', px: 1, py: 1, minHeight: 0 }}>
+                  <Typography
+                    variant="h6"
+                    component="h2"
+                    sx={{ fontWeight: 600, fontSize: '1rem', textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', mb: 0.5 }}
+                  >
+                    {project.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      textAlign: 'center',
+                      minHeight: 36,
+                      maxHeight: 36,
+                      mb: 1
+                    }}
+                  >
+                    {project.description}
+                  </Typography>
+                  <Box sx={{ display: 'flex', flexWrap: 'nowrap', gap: 0.5, height: 24, overflow: 'hidden', justifyContent: 'center', alignItems: 'center', mb: 1 }}>
+                    {project.technologies.slice(0, 2).map((tech) => (
+                      <Box
+                        key={tech}
+                        sx={{
+                          px: 1,
+                          py: 0.25,
+                          fontSize: '0.75rem',
+                          borderRadius: '999px',
+                          background: theme.palette.grey[200],
+                          color: theme.palette.text.secondary,
+                          fontWeight: 500,
+                          mr: 0.5,
+                          whiteSpace: 'nowrap',
+                          lineHeight: 1.5
+                        }}
                       >
-                        GitHub
-                      </Button>
+                        {tech}
+                      </Box>
+                    ))}
+                    {project.technologies.length > 2 && (
+                      <Box
+                        sx={{
+                          px: 1,
+                          py: 0.25,
+                          fontSize: '0.75rem',
+                          borderRadius: '999px',
+                          background: theme.palette.grey[300],
+                          color: theme.palette.text.secondary,
+                          fontWeight: 500,
+                          whiteSpace: 'nowrap',
+                          lineHeight: 1.5
+                        }}
+                      >
+                        {`+${project.technologies.length - 2}`}
+                      </Box>
                     )}
-                  </CardActions>
-                </MotionCard>
-              </Grid>
+                  </Box>
+                </CardContent>
+                <CardActions sx={{ p: 2, pt: 0, mt: 'auto', justifyContent: 'center' }}>
+                  <Button
+                    size="small"
+                    startIcon={<CodeIcon />}
+                    onClick={() => handleOpenDialog(project)}
+                  >
+                    Learn More
+                  </Button>
+                </CardActions>
+              </MotionCard>
             ))}
-          </Grid>
+          </Box>
         </MotionBox>
       </Container>
 

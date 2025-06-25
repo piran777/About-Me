@@ -55,31 +55,30 @@ const experiences = [
   {
     company: 'hyperPad',
     position: 'Junior Software Engineer',
-    period: 'January 2025 - Current',
+    period: 'Jan 2025 - Current',
     location: 'London, ON',
     logo: hyperPadLogo,
     responsibilities: [
-      'Developed key features for a financial platform serving 100,000+ professionals through a contracting project, including improving linked account visibility and modernizing form components for enhanced usability.',
-      'Upgraded backend infrastructure by migrating a Ruby on Rails system to version 7, improving scalability and performance.',
-      'Led internationalization efforts, translating platform content into 7 languages for global accessibility.',
-      'Designed and implemented a schema management system, enhancing efficiency for administrators.',
-      'Collaborated cross-functionally to roll out new features and automated tests, improving software reliability.'
+      'Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization.',
+      'Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration.',
+      'Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead.',
+      'Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment.'
     ],
     technologies: [
-      'Ruby on Rails 6/7', 'React.js', 'JavaScript', 'TypeScript', 'Cucumber rails', 
-      'RSpec', 'Jest', 'ESBuild', 'Webpacker', 'Material-UI', 'Xcode', 'Docker', 'SCSS', 'HTML/CSS'
+      'Ruby on Rails 6/7', 'React.js', 'JavaScript', 'TypeScript', 'i18n', 'GitLab', 'Cucumber', 'RSpec', 'Jest', 'Material-UI', 'Docker', 'AWS', 'Redux', 'Redis'
     ]
   },
   {
     company: 'hyperPad',
     position: 'Software Developer Internship',
-    period: 'September 2024 - January 2025',
+    period: 'Sept 2024 - Jan 2025',
     location: 'London, ON',
     logo: hyperPadLogo,
     responsibilities: [
-      'Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to the latest frameworks and models to improve scalability and performance.',
+      'Spearheaded backend infrastructure upgrades, migrating Ruby on Rails systems from version 6 to 7 while maintaining production stability for high-traffic financial applications.',
+      'Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to improve scalability and performance.',
       'Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms.',
-      'Led a development team in building multiple features, working directly with the client to gather requirements, incorporate feedback, and deliver tailored solutions on time and within scope.'
+      'Gained foundational experience in full-stack development and client management, preparing for advanced financial platform contracting work.'
     ],
     technologies: [
       'Ruby on Rails', 'Node.js', 'React.js', 'React Native', 'JavaScript', 'TypeScript', 'HTML/CSS'
@@ -88,74 +87,68 @@ const experiences = [
   {
     company: 'HiCoder',
     position: 'Software Engineer Internship',
-    period: 'June 2024 - September 2024',
+    period: 'Jun 2024 - Sept 2024',
     location: 'Canada (Remote)',
     logo: hicoderLogo,
     responsibilities: [
-      'Led the design and development of scalable server-side applications using Node.js, enhancing performance and reliability.',
-      'Developed the client side using crema/react.js, ensuring a seamless and responsive user experience.',
+      'Led design and development of scalable server-side applications using Node.js, enhancing performance and reliability, while developing responsive client-side features using React.js.',
       'Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications.',
       'Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience.'
     ],
     technologies: [
-      'Node.js', 'Express.js', 'React.js', 'JavaScript', 'HTML', 'CSS', 'Crema (React UI Framework)'
+      'Node.js', 'Express.js', 'React.js', 'JavaScript', 'HTML', 'CSS', 'Material UI/ThemeUI'
     ]
   },
   {
     company: 'PawmirPaintings LTD',
     position: 'Web Developer Internship',
-    period: 'April 2022 - September 2023',
+    period: 'Apr 2022 - Sept 2023',
     location: 'London, ON',
     logo: pawmirLogo,
     responsibilities: [
-      'Collaborated with a diverse team of developers, actively contributing ideas and insights for website development.',
       'Built the company\'s website through the integration of JavaScript, CSS, and HTML, leading to enhanced user interaction and navigation.',
       'Implemented a robust contact information section using Node.js/Express, addressing user issues promptly.'
     ],
     technologies: [
       'Node.js', 'Express.js', 'JavaScript', 'HTML', 'CSS'
     ]
-  },
-  {
-    company: 'HackWestern 8 Hackathon',
-    position: 'Participant',
-    period: 'November 2021',
-    location: 'London, ON',
-    logo: hackwesternLogo,
-    responsibilities: [
-      'Participated in one of Canada\'s largest student-run hackathons competing against 341 participants in a team of 4.',
-      'Learned from SWE reps of companies such as TELUS, Scotiabank, Sunlife, and participated in pre-event workshops to enhance our ability to create a strong project.',
-      '48 hour time limit to create a project for the event and compete for awards and $19,350 in prizes sponsored by the companies present at Hackwestern 8.'
-    ],
-    technologies: [
-      'React.js', 'Node.js', 'Express.js', 'MongoDB', 'HTML', 'CSS', 'JavaScript'
-    ]
   }
 ];
 
 const projects = [
   {
-    title: 'Traffic Density Predictor',
-    description: 'An ML-powered tool to predict traffic patterns and optimize route planning',
+    title: 'Intelligent Traffic Management System',
+    description: 'Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning.',
     details: [
-      'Engineered a machine learning model that predicts the traffic density at an intersection using a random forest classifier and to accurately forecast congestion patterns and optimize route planning.',
-      'Developed an advanced heat map algorithm in Python to predict high-traffic areas in London, Ontario so that it can be placed on a google maps UI.',
+      'Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning.',
+      'Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization.'
     ],
     technologies: ['Python', 'Pandas', 'Streamlit', 'Git', 'Jira/Confluence'],
     images: [trafficImage, trafficImage2],
-    videoUrl: 'https://www.youtube.com/embed/Xrf8B0IFcyI'
+    videoUrl: null
   },
   {
-    title: 'MyBlog',
-    description: 'A full-stack blogging platform with user authentication and CRUD operations',
+    title: 'ContentCraft - Full-Stack Publishing Platform',
+    description: 'Engineered a comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities.',
     details: [
-      'Designed the front-end using React, providing a responsive and user-friendly interface with a RESTful API using Node.js and Express for handling CRUD operations on blog posts in the back-end',
-      'User authentication and authorization using JSON Web Tokens (JWT) is used for secure access to the platform.',
-      'Used docker and kubernetes to dockerize the application in order to deploy it using GCP',
-      'Created full documentation of the program which explains the code and functionality of the program in a ReadMe.',
+      'Engineered a comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities.',
+      'Implemented secure user registration, JWT authentication, and database-driven commenting system with content tagging functionality.',
+      'Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction.'
     ],
-    technologies: ['JavaScript', 'CSS', 'HTML', 'React.js', 'Node.js/Express', 'Docker', 'Kubernetes', 'JWT'],
+    technologies: ['JavaScript', 'React.js', 'Node.js/Express', 'Authentication Middleware', 'Database Integration', 'RESTful APIs'],
     images: [blog1, blog2],
+    videoUrl: null
+  },
+  {
+    title: 'NetSim - Network Protocol Analysis & Simulation',
+    description: 'Designed and implemented a multi-host network topology using Mininet with three hosts and one switch for comprehensive protocol testing.',
+    details: [
+      'Designed and implemented a multi-host network topology using Mininet with three hosts and one switch for comprehensive protocol testing.',
+      'Developed UDP/TCP communication protocols and performed deep packet analysis using Wireshark for network optimization.',
+      'Created Python-based network simulation tools to analyze traffic patterns and protocol efficiency in controlled environments.'
+    ],
+    technologies: ['Python', 'Wireshark', 'Mininet', 'Network Programming', 'Protocol Analysis', 'Systems Programming'],
+    images: [maze2],
     videoUrl: null
   },
   {
@@ -163,7 +156,7 @@ const projects = [
     description: 'A 2D maze game with multiple levels built in Unity',
     details: [
       'Made a 2D maze game with 3 levels using Unity and C# to create the levels for the game and to give movement and actions to the characters within the game using the C# scripts',
-      'Had different enemy types in each level with AOE detection/shooting, target tracking and different characters which use different abilities in the game.',
+      'Had different enemy types in each level with AOE detection/shooting, target tracking and different characters which use different abilities in the game.'
     ],
     technologies: ['C#', 'Unity'],
     images: [maze2],
@@ -171,14 +164,14 @@ const projects = [
   },
   {
     title: 'MyMusicPlayer',
-    description: 'A music streaming app with playlist management and YouTube integration',
+    description: 'A music streaming app with playlist management and user authentication.',
     details: [
-      'Audio streaming app that can create, update, and delete playlists by adding songs and playing them directly from youtube for logged in users.',
-      'Search by artists, albums, or songs names to find the track and add it to a playlist or to remove it from an existing one',
-      'Account creation, verification, deletion, deactivation, and authentication with JWT is integrated. Users that are logged in with an account have more features than guests that have no account.',
+      'Audio streaming app that can create, update, and delete playlists by adding songs for logged in users.',
+      'Search by artists, albums, or songs names to find the track and add it to a playlist or to remove it from an existing one.',
+      'Account creation, verification, deletion, deactivation, and authentication with JWT is integrated. Users that are logged in with an account have more features than guests that have no account.'
     ],
-    technologies: ['JavaScript', 'React', 'Node.js', 'Express', 'CSS', 'HTML', 'MySQL', 'AWS', 'JWT'],
-    images: [music1, music2],
+    technologies: ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MySQL', 'AWS', 'JWT'],
+    images: [music1],
     videoUrl: null
   }
 ];
