@@ -3,7 +3,6 @@ import {
   Box, 
   Container, 
   Typography, 
-  Grid,
   Card,
   CardContent,
   CardMedia,
@@ -31,7 +30,6 @@ import {
 
 import trafficImage from '../Assets/TrafficAIProject.PNG';
 import blog1 from '../Assets/blog-login.PNG';
-import blog2 from '../Assets/LoggedInBLog.PNG';
 import music1 from '../Assets/music-1.PNG'; 
 import maze2 from '../Assets/Maze-Game-diag.PNG'; 
 import topoolgy from '../Assets/topoolgy.png';

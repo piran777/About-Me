@@ -4,8 +4,6 @@ import {
   Container, 
   Typography, 
   Grid, 
-  Card, 
-  CardContent, 
   Button, 
   useTheme,
   Paper
@@ -16,8 +14,7 @@ import {
   Email as EmailIcon, 
   LocationOn as LocationIcon, 
   LinkedIn as LinkedInIcon, 
-  GitHub as GitHubIcon,
-  Phone as PhoneIcon
+  GitHub as GitHubIcon
 } from '@mui/icons-material';
 
 const MotionBox = motion(Box);

@@ -7,7 +7,6 @@ import {
   Grid, 
   Tabs, 
   Tab, 
-  Divider,
   Chip,
   Button,
   Avatar,
@@ -26,28 +25,16 @@ import { alpha } from '@mui/material/styles';
 import { useInView } from 'react-intersection-observer';
 import './About.css';
 import pawmirLogo from '../Assets/PawmirPaintingLTD.PNG';
-import hackwesternLogo from '../Assets/HackWestern8.png';
 import trafficImage from '../Assets/TrafficAIProject.PNG';
 import trafficImage2 from '../Assets/traffic2.PNG';
-import musicAppImage from '../Assets/HackWestern8.png';
 import blog1 from '../Assets/blog-login.PNG';
 import blog2 from '../Assets/LoggedInBLog.PNG';
-import blog3 from '../Assets/makingpostblog.PNG';
-import blog4 from '../Assets/EditBlog.PNG';
-import blog5 from '../Assets/EDIT2BLog.PNG';
-import blog6 from '../Assets/edit3blog.PNG';
-import blog7 from '../Assets/CommentBlog.PNG';
 import music1 from '../Assets/music-1.PNG'; 
-import music2 from '../Assets/music2.PNG'; 
 import maze2 from '../Assets/Maze-Game-diag.PNG'; 
-import maze3 from '../Assets/Maze-Game-Take hits.PNG'; 
-import maze4 from '../Assets/mazegame-3.PNG'; 
-import maze5 from '../Assets/maze-3.PNG';
 import hicoderLogo from '../Assets/hicoder_logo.png'; 
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
-const MotionTypography = motion(Typography);
 
 const hyperPadLogo = `${process.env.PUBLIC_URL}/hyperpad_logo.jpg`;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, Link, IconButton, Divider, Stack } from '@mui/material';
+import { Box, Container, Typography, Grid, Link, IconButton, Divider } from '@mui/material';
 import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon, Email as EmailIcon } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom';
 
