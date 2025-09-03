@@ -191,8 +191,7 @@ const Experience = () => {
                     borderRadius: '20px',
                     background: experience.type === 'current' 
                       ? 'linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, rgba(92, 107, 192, 0.05) 100%)'
-                      : 'rgba(255, 255, 255, 0.9)',
-                    backdropFilter: 'blur(10px)',
+                      : 'rgba(255, 255, 255, 1)',
                     border: experience.type === 'current' 
                       ? '1px solid rgba(25, 118, 210, 0.2)'
                       : '1px solid rgba(0, 0, 0, 0.08)',
@@ -228,15 +227,15 @@ const Experience = () => {
                   animate={experienceInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Box sx={{ p: 4, display: 'flex', gap: 3, alignItems: 'flex-start' }}>
+                  <Box sx={{ p: { xs: 2, md: 4 }, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: { xs: 2, md: 3 }, alignItems: { xs: 'center', sm: 'flex-start' } }}>
                     <Box sx={{ flexShrink: 0 }}>
                       <Avatar 
                         src={experience.logo} 
                         alt={`${experience.company} logo`}
                         variant="rounded"
                         sx={{ 
-                          width: 90, 
-                          height: 90,
+                          width: { xs: 60, md: 90 }, 
+                          height: { xs: 60, md: 90 },
                           boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
                           backgroundColor: 'white',
                           p: 1.5,
