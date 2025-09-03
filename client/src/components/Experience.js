@@ -182,16 +182,16 @@ const Experience = () => {
           animate={experienceInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <Grid container spacing={4}>
+          <Grid container spacing={{ xs: 3, md: 4 }}>
             {experiences.map((experience, index) => (
               <Grid item xs={12} key={index}>
                 <MotionCard 
                   sx={{ 
                     p: 0,
-                    borderRadius: '20px',
-                    background: experience.type === 'current' 
-                      ? 'linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, rgba(92, 107, 192, 0.05) 100%)'
-                      : 'rgba(255, 255, 255, 1)',
+                    borderRadius: { xs: '16px', md: '20px' },
+                    backgroundColor: experience.type === 'current' 
+                      ? '#f8f9ff'
+                      : '#ffffff',
                     border: experience.type === 'current' 
                       ? '1px solid rgba(25, 118, 210, 0.2)'
                       : '1px solid rgba(0, 0, 0, 0.08)',
@@ -201,8 +201,10 @@ const Experience = () => {
                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                     overflow: 'hidden',
                     position: 'relative',
+                    width: '100%',
+                    minHeight: 'auto',
                     '&:hover': {
-                      transform: 'translateY(-8px) scale(1.02)',
+                      transform: { xs: 'translateY(-4px)', md: 'translateY(-8px) scale(1.02)' },
                       boxShadow: experience.type === 'current'
                         ? '0 25px 50px rgba(25, 118, 210, 0.15), 0 12px 24px rgba(0, 0, 0, 0.15)'
                         : '0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08)',
@@ -227,155 +229,159 @@ const Experience = () => {
                   animate={experienceInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Box sx={{ p: { xs: 2, md: 4 }, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: { xs: 2, md: 3 }, alignItems: { xs: 'center', sm: 'flex-start' } }}>
-                    <Box sx={{ flexShrink: 0 }}>
-                      <Avatar 
-                        src={experience.logo} 
-                        alt={`${experience.company} logo`}
-                        variant="rounded"
-                        sx={{ 
-                          width: { xs: 60, md: 90 }, 
-                          height: { xs: 60, md: 90 },
-                          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
-                          backgroundColor: 'white',
-                          p: 1.5,
-                          border: '2px solid rgba(255, 255, 255, 0.8)',
-                          transition: 'all 0.3s ease'
-                        }}
-                      />
-                    </Box>
-                    <Box sx={{ flex: 1, minWidth: 0 }}>
-                      <Box sx={{ mb: 3 }}>
+                  <Box sx={{ p: { xs: 3, md: 4 } }}>
+                    {/* Mobile-first layout */}
+                    <Box sx={{ 
+                      display: 'flex', 
+                      gap: 2, 
+                      alignItems: 'flex-start',
+                      mb: 3
+                    }}>
+                      <Box sx={{ flexShrink: 0 }}>
+                        <Avatar 
+                          src={experience.logo} 
+                          alt={`${experience.company} logo`}
+                          variant="rounded"
+                          sx={{ 
+                            width: { xs: 50, md: 90 }, 
+                            height: { xs: 50, md: 90 },
+                            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
+                            backgroundColor: 'white',
+                            p: { xs: 1, md: 1.5 },
+                            border: '2px solid rgba(255, 255, 255, 0.8)',
+                            transition: 'all 0.3s ease'
+                          }}
+                        />
+                      </Box>
+                      <Box sx={{ flex: 1, minWidth: 0 }}>
                         <Typography 
                           variant="h4" 
                           gutterBottom 
                           sx={{ 
                             fontWeight: 700, 
                             color: experience.type === 'current' ? 'primary.main' : 'text.primary',
-                            fontSize: { xs: '1.5rem', md: '1.8rem' },
-                            lineHeight: 1.2
+                            fontSize: { xs: '1.3rem', md: '1.8rem' },
+                            lineHeight: 1.2,
+                            mb: 1
                           }}
                         >
                           {experience.position}
                         </Typography>
-                        <Box sx={{ 
-                          display: 'flex', 
-                          flexDirection: { xs: 'column', sm: 'row' },
-                          gap: { xs: 1, sm: 2 },
-                          alignItems: { xs: 'flex-start', sm: 'center' },
-                          mb: 2 
-                        }}>
-                          <Typography 
-                            variant="h6" 
-                            sx={{ 
-                              fontWeight: 600,
-                              color: 'text.primary',
-                              fontSize: '1.1rem'
-                            }}
-                          >
-                            {experience.company}
-                          </Typography>
-                          <Box sx={{ 
-                            display: 'flex', 
-                            gap: 1,
-                            flexWrap: 'wrap',
-                            alignItems: 'center'
-                          }}>
-                            <Chip 
-                              label={experience.location}
-                              size="small"
-                              variant="outlined"
-                              sx={{ 
-                                borderColor: 'primary.light',
-                                color: 'primary.main',
-                                fontWeight: 500
-                              }}
-                            />
-                            <Chip 
-                              label={experience.period}
-                              size="small"
-                              variant={experience.type === 'current' ? 'filled' : 'outlined'}
-                              color={experience.type === 'current' ? 'primary' : 'default'}
-                              sx={{ 
-                                fontWeight: 500,
-                                ...(experience.type === 'current' && {
-                                  background: 'linear-gradient(45deg, #1976d2 30%, #5c6bc0 90%)',
-                                  color: 'white'
-                                })
-                              }}
-                            />
-                          </Box>
-                        </Box>
-                      </Box>
-                        
-                      <Box sx={{ mb: 3 }}>
-                        <Box component="ul" sx={{ 
-                          pl: 0, 
-                          m: 0, 
-                          listStyle: 'none',
-                          '& li': {
-                            position: 'relative',
-                            paddingLeft: '1.5rem',
-                            marginBottom: '1rem',
-                            lineHeight: 1.7,
-                            fontSize: '0.95rem',
-                            color: 'text.secondary',
-                            '&::before': {
-                              content: '"▸"',
-                              position: 'absolute',
-                              left: 0,
-                              color: experience.type === 'current' ? 'primary.main' : 'secondary.main',
-                              fontWeight: 'bold',
-                              fontSize: '1.1rem'
-                            }
-                          }
-                        }}>
-                          {experience.responsibilities.map((responsibility, idx) => (
-                            <Typography component="li" key={idx} variant="body1">
-                              {responsibility}
-                            </Typography>
-                          ))}
-                        </Box>
-                      </Box>
-                        
-                      <Box>
                         <Typography 
-                          variant="subtitle1" 
-                          gutterBottom 
+                          variant="h6" 
                           sx={{ 
-                            fontWeight: 700,
+                            fontWeight: 600,
                             color: 'text.primary',
-                            fontSize: '1rem',
+                            fontSize: { xs: '1rem', md: '1.1rem' },
                             mb: 2
                           }}
                         >
-                          Technologies & Skills
+                          {experience.company}
                         </Typography>
-                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                          {experience.technologies.map(tech => (
-                            <Chip 
-                              key={tech} 
-                              label={tech} 
-                              size="small" 
-                              variant="filled"
-                              sx={{ 
-                                background: experience.type === 'current' 
-                                  ? 'linear-gradient(45deg, rgba(25, 118, 210, 0.1) 0%, rgba(92, 107, 192, 0.1) 100%)'
-                                  : 'rgba(0, 0, 0, 0.05)',
-                                color: experience.type === 'current' ? 'primary.main' : 'text.secondary',
-                                border: experience.type === 'current' ? '1px solid rgba(25, 118, 210, 0.2)' : '1px solid transparent',
-                                fontWeight: 500,
-                                fontSize: '0.75rem',
-                                height: '28px',
-                                transition: 'all 0.2s ease',
-                                '&:hover': {
-                                  transform: 'translateY(-2px)',
-                                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
-                                }
-                              }}
-                            />
-                          ))}
+                        <Box sx={{ 
+                          display: 'flex', 
+                          gap: 1,
+                          flexWrap: 'wrap',
+                          mb: 2
+                        }}>
+                          <Chip 
+                            label={experience.location}
+                            size="small"
+                            variant="outlined"
+                            sx={{ 
+                              borderColor: 'primary.light',
+                              color: 'primary.main',
+                              fontWeight: 500,
+                              fontSize: { xs: '0.7rem', md: '0.75rem' }
+                            }}
+                          />
+                          <Chip 
+                            label={experience.period}
+                            size="small"
+                            variant={experience.type === 'current' ? 'filled' : 'outlined'}
+                            color={experience.type === 'current' ? 'primary' : 'default'}
+                            sx={{ 
+                              fontWeight: 500,
+                              fontSize: { xs: '0.7rem', md: '0.75rem' },
+                              ...(experience.type === 'current' && {
+                                background: 'linear-gradient(45deg, #1976d2 30%, #5c6bc0 90%)',
+                                color: 'white'
+                              })
+                            }}
+                          />
                         </Box>
+                      </Box>
+                    </Box>
+                        
+                    {/* Responsibilities Section */}
+                    <Box sx={{ mb: 3 }}>
+                      <Box component="ul" sx={{ 
+                        pl: 0, 
+                        m: 0, 
+                        listStyle: 'none',
+                        '& li': {
+                          position: 'relative',
+                          paddingLeft: '1.5rem',
+                          marginBottom: { xs: '0.8rem', md: '1rem' },
+                          lineHeight: 1.6,
+                          fontSize: { xs: '0.9rem', md: '0.95rem' },
+                          color: 'text.secondary',
+                          '&::before': {
+                            content: '"▸"',
+                            position: 'absolute',
+                            left: 0,
+                            color: experience.type === 'current' ? 'primary.main' : 'secondary.main',
+                            fontWeight: 'bold',
+                            fontSize: { xs: '1rem', md: '1.1rem' }
+                          }
+                        }
+                      }}>
+                        {experience.responsibilities.map((responsibility, idx) => (
+                          <Typography component="li" key={idx} variant="body1">
+                            {responsibility}
+                          </Typography>
+                        ))}
+                      </Box>
+                    </Box>
+                        
+                    {/* Technologies Section */}
+                    <Box>
+                      <Typography 
+                        variant="subtitle1" 
+                        gutterBottom 
+                        sx={{ 
+                          fontWeight: 700,
+                          color: 'text.primary',
+                          fontSize: { xs: '0.95rem', md: '1rem' },
+                          mb: 2
+                        }}
+                      >
+                        Technologies & Skills
+                      </Typography>
+                      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: { xs: 0.5, md: 1 } }}>
+                        {experience.technologies.map(tech => (
+                          <Chip 
+                            key={tech} 
+                            label={tech} 
+                            size="small" 
+                            variant="filled"
+                            sx={{ 
+                              background: experience.type === 'current' 
+                                ? 'linear-gradient(45deg, rgba(25, 118, 210, 0.1) 0%, rgba(92, 107, 192, 0.1) 100%)'
+                                : 'rgba(0, 0, 0, 0.05)',
+                              color: experience.type === 'current' ? 'primary.main' : 'text.secondary',
+                              border: experience.type === 'current' ? '1px solid rgba(25, 118, 210, 0.2)' : '1px solid transparent',
+                              fontWeight: 500,
+                              fontSize: { xs: '0.7rem', md: '0.75rem' },
+                              height: { xs: '24px', md: '28px' },
+                              transition: 'all 0.2s ease',
+                              '&:hover': {
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+                              }
+                            }}
+                          />
+                        ))}
                       </Box>
                     </Box>
                   </Box>
