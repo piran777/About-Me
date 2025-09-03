@@ -21,7 +21,7 @@ const Resume = () => {
     threshold: 0.1,
   });
 
-  const resumePdfPath = `${process.env.PUBLIC_URL}/Piran Aminullah Resume.pdf`;
+  const resumePdfPath = `${process.env.PUBLIC_URL}/piran_aminullah_cv.pdf`;
 
   return (
     <Box component="main" sx={{ py: 10 }}>
@@ -45,7 +45,7 @@ const Resume = () => {
             size="large" 
             startIcon={<DownloadIcon />}
             href={resumePdfPath}
-            download="Piran_Aminullah_Resume.pdf"
+            download="piran_aminullah_cv.pdf"
             sx={{ mt: 2, mb: 6 }}
           >
             Download PDF
@@ -90,7 +90,7 @@ const Resume = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    Jan 2025 - Current
+                    Jan 2025 – Present
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     London, ON
@@ -99,21 +99,54 @@ const Resume = () => {
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization.
+                  Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration.
+                  Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead.
+                  Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment.
+                  Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={{ mt: 1, fontStyle: 'italic' }}>
-                Technologies Used: Ruby on Rails 6/7, React.js, JavaScript, TypeScript, i18n, GitLab, Cucumber, RSpec, Jest, Material-UI, Docker, AWS, Redux, Redis
-              </Typography>
+            </Box>
+            
+            {/* Zenex Digital Solutions - Freelance Software Engineer */}
+            <Box sx={{ mb: 4 }}>
+              <Grid container justifyContent="space-between" alignItems="flex-start">
+                <Grid item>
+                  <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                    Freelance Software Engineer
+                  </Typography>
+                  <Typography variant="subtitle1">
+                    Zenex Digital Solutions
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography variant="body2" color="text.secondary">
+                    Jan 2025 – Present
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" align="right">
+                    London, ON
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
+                <Typography component="li" variant="body2" paragraph>
+                  Developed custom websites and web applications for small to medium-sized businesses, focusing on responsive design and user experience optimization to drive client engagement and conversions
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Built and maintained e-commerce platforms using modern web technologies, implementing secure payment processing and inventory management systems for local Ontario businesses
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Designed and implemented SEO-optimized websites with clean code architecture, improving client search engine rankings and online visibility through technical SEO best practices
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Collaborated directly with clients to gather requirements, provide technical consultation, and deliver cost-effective digital solutions tailored to their specific business needs and budgets
+                </Typography>
+              </Box>
             </Box>
             
             {/* hyperPad - Software Developer Internship */}
@@ -129,7 +162,7 @@ const Resume = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    Sept 2024 - Jan 2025
+                    Sept 2024 – Jan 2025
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     London, ON
@@ -138,82 +171,92 @@ const Resume = () => {
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Spearheaded backend infrastructure upgrades, migrating Ruby on Rails systems from version 6 to 7 while maintaining production stability for high-traffic financial applications.
+                  Spearheaded backend infrastructure upgrades, migrating Ruby on Rails systems from version 6 to 7 while maintaining production stability for high-traffic financial applications
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to improve scalability and performance.
+                  Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to improve scalability and performance
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms.
+                  Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Gained foundational experience in full-stack development and client management, preparing for advanced financial platform contracting work.
+                  Gained foundational experience in full-stack development and client management, preparing for advanced financial platform contracting work
                 </Typography>
               </Box>
             </Box>
             
             {/* HiCoder */}
-            <Box sx={{ mb: 4 }}>
+            <Box>
               <Grid container justifyContent="space-between" alignItems="flex-start">
                 <Grid item>
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     Software Engineer Internship
                   </Typography>
                   <Typography variant="subtitle1">
-                    HiCoder
+                    HiCoder Canada
                   </Typography>
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    Jun 2024 - Sept 2024
+                    Jun 2024 – Sept 2024
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
-                    Canada (Remote)
+                    (Remote)
                   </Typography>
                 </Grid>
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Led design and development of scalable server-side applications using Node.js, enhancing performance and reliability, while developing responsive client-side features using React.js.
+                  Led design and development of scalable server-side applications using Node.js, enhancing performance and reliability, while developing responsive client-side features using React.js
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications.
+                  Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience.
+                  Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={{ mt: 1, fontStyle: 'italic' }}>
-                Technologies Used: Node.js, Express.js, React.js, JavaScript, HTML, CSS, Material UI/ThemeUI
-              </Typography>
             </Box>
+          </Box>
+          
+          <Box sx={{ mb: 5 }}>
+            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+              Selected Projects
+            </Typography>
+            <Divider sx={{ mb: 3 }} />
             
-            {/* PawmirPaintings LTD */}
-            <Box>
-              <Grid container justifyContent="space-between" alignItems="flex-start">
-                <Grid item>
-                  <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                    Web Developer Internship
-                  </Typography>
-                  <Typography variant="subtitle1">
-                    PawmirPaintings LTD
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="body2" color="text.secondary">
-                    Apr 2022 - Sept 2023
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" align="right">
-                    London, ON
-                  </Typography>
-                </Grid>
-              </Grid>
+            {/* Intelligent Traffic Management System */}
+            <Box sx={{ mb: 4 }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                Intelligent Traffic Management System
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                Python, Pandas, Streamlit, Git, Jira/Confluence
+              </Typography>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Built the company's website through the integration of JavaScript, CSS, and HTML, leading to enhanced user interaction and navigation.
+                  Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Implemented a robust contact information section using Node.js/Express, addressing user issues promptly.
+                  Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization
+                </Typography>
+              </Box>
+            </Box>
+            
+            {/* ContentCraft */}
+            <Box>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                ContentCraft - Full-Stack Publishing Platform
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                JavaScript, React.js, Node.js/Express
+              </Typography>
+              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
+                <Typography component="li" variant="body2" paragraph>
+                  Engineered a comprehensive content management system with user authentication, role-based access control, dynamic post creation/editing capabilities, secure JWT authentication, and database-driven commenting system with content tagging functionality
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction
                 </Typography>
               </Box>
             </Box>
@@ -228,20 +271,26 @@ const Resume = () => {
             <Grid container justifyContent="space-between" alignItems="flex-start">
               <Grid item>
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                  Bachelor of Engineering Science, Software Engineering
+                  Bachelor's of Engineering Science, Software Engineering
                 </Typography>
                 <Typography variant="subtitle1">
                   Western University
                 </Typography>
               </Grid>
               <Grid item>
+                <Typography variant="body2" color="text.secondary">
+                  Sept 2020 – Apr 2024
+                </Typography>
                 <Typography variant="body2" color="text.secondary" align="right">
                   London, ON
                 </Typography>
               </Grid>
             </Grid>
             <Typography variant="body2" sx={{ mt: 1 }}>
-              Completed comprehensive coursework in software development, algorithms, data structures, database systems, and software project management.
+              <strong>Western Engineering Co-op/Internship Program</strong>
+            </Typography>
+            <Typography variant="body2" sx={{ mt: 1 }}>
+              <strong>Course Work:</strong> Data Structures and Algorithms, Databases, Networking, Software Engineering Design, Software Project and Process Management, Software Design, Computer Information Security, Data Science/Machine Learning, Digital Logic Systems, Microprocessors/Microcomputers, Operating Systems, AI 1, AI 2, Cloud Computing
             </Typography>
           </Box>
           
@@ -252,19 +301,22 @@ const Resume = () => {
             <Divider sx={{ mb: 3 }} />
             
             <Typography variant="body1" paragraph>
-              <strong>Languages:</strong> JavaScript, TypeScript, Python, Ruby, Java, C#, C/C++, HTML, CSS
+              <strong>Languages:</strong> JavaScript, TypeScript, Java, Python, Ruby
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Frameworks & Libraries:</strong> React.js, Node.js, Express.js, Ruby on Rails, Material-UI, Crema
+              <strong>Frontend:</strong> ReactJS, HTML/CSS, SCSS, MaterialUI
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Testing:</strong> Jest, RSpec, Cucumber Rails
+              <strong>Backend:</strong> NodeJS/Express, Ruby on Rails 7, Springboot
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Tools & Platforms:</strong> Git, Docker, Kubernetes, AWS, ESBuild, Webpacker, Xcode, Unity
+              <strong>Databases:</strong> mySQL, mongoDB, Redis
+            </Typography>
+            <Typography variant="body1" paragraph>
+              <strong>Cloud & DevOps:</strong> AWS, Docker, Kubernetes, Google Cloud Platform (GCP)
             </Typography>
             <Typography variant="body1">
-              <strong>Databases:</strong> MongoDB, MySQL, PostgreSQL
+              <strong>Testing & Tools:</strong> Cucumber/Selenium Testing, RSpec, Jest, Playwright, Git, Pandas, Jira/Confluence, Trello
             </Typography>
           </Box>
         </MotionPaper>

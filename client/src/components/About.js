@@ -31,7 +31,8 @@ import blog1 from '../Assets/blog-login.PNG';
 import blog2 from '../Assets/LoggedInBLog.PNG';
 import music1 from '../Assets/music-1.PNG'; 
 import maze2 from '../Assets/Maze-Game-diag.PNG'; 
-import hicoderLogo from '../Assets/hicoder_logo.png'; 
+import hicoderLogo from '../Assets/hicoder_logo.png';
+import zenexLogo from '../Assets/zeenxlogo.png'; 
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
@@ -42,48 +43,64 @@ const experiences = [
   {
     company: 'hyperPad',
     position: 'Junior Software Engineer',
-    period: 'Jan 2025 - Current',
+    period: 'Jan 2025 – Present',
     location: 'London, ON',
     logo: hyperPadLogo,
     responsibilities: [
-      'Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization.',
-      'Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration.',
-      'Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead.',
-      'Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment.'
+      'Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization',
+      'Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration',
+      'Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead',
+      'Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment'
     ],
     technologies: [
-      'Ruby on Rails 6/7', 'React.js', 'JavaScript', 'TypeScript', 'i18n', 'GitLab', 'Cucumber', 'RSpec', 'Jest', 'Material-UI', 'Docker', 'AWS', 'Redux', 'Redis'
+      'Ruby on Rails 7', 'React.js', 'JavaScript', 'TypeScript', 'i18n', 'Cucumber', 'RSpec', 'Jest', 'Material-UI', 'Docker', 'AWS'
+    ]
+  },
+  {
+    company: 'Zenex Digital Solutions',
+    position: 'Freelance Software Engineer',
+    period: 'Jan 2025 – Present',
+    location: 'London, ON',
+    logo: zenexLogo,
+    responsibilities: [
+      'Developed custom websites and web applications for small to medium-sized businesses, focusing on responsive design and user experience optimization to drive client engagement and conversions',
+      'Built and maintained e-commerce platforms using modern web technologies, implementing secure payment processing and inventory management systems for local Ontario businesses',
+      'Designed and implemented SEO-optimized websites with clean code architecture, improving client search engine rankings and online visibility through technical SEO best practices',
+      'Collaborated directly with clients to gather requirements, provide technical consultation, and deliver cost-effective digital solutions tailored to their specific business needs and budgets'
+    ],
+    technologies: [
+      'ReactJS', 'NodeJS/Express', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SCSS', 'MaterialUI', 'SEO', 'E-commerce'
     ]
   },
   {
     company: 'hyperPad',
     position: 'Software Developer Internship',
-    period: 'Sept 2024 - Jan 2025',
+    period: 'Sept 2024 – Jan 2025',
     location: 'London, ON',
     logo: hyperPadLogo,
     responsibilities: [
-      'Spearheaded backend infrastructure upgrades, migrating Ruby on Rails systems from version 6 to 7 while maintaining production stability for high-traffic financial applications.',
-      'Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to improve scalability and performance.',
-      'Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms.',
-      'Gained foundational experience in full-stack development and client management, preparing for advanced financial platform contracting work.'
+      'Spearheaded backend infrastructure upgrades, migrating Ruby on Rails systems from version 6 to 7 while maintaining production stability for high-traffic financial applications',
+      'Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to improve scalability and performance',
+      'Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms',
+      'Gained foundational experience in full-stack development and client management, preparing for advanced financial platform contracting work'
     ],
     technologies: [
       'Ruby on Rails', 'Node.js', 'React.js', 'React Native', 'JavaScript', 'TypeScript', 'HTML/CSS'
     ]
   },
   {
-    company: 'HiCoder',
+    company: 'HiCoder Canada',
     position: 'Software Engineer Internship',
-    period: 'Jun 2024 - Sept 2024',
-    location: 'Canada (Remote)',
+    period: 'Jun 2024 – Sept 2024',
+    location: '(Remote)',
     logo: hicoderLogo,
     responsibilities: [
-      'Led design and development of scalable server-side applications using Node.js, enhancing performance and reliability, while developing responsive client-side features using React.js.',
-      'Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications.',
-      'Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience.'
+      'Led design and development of scalable server-side applications using Node.js, enhancing performance and reliability, while developing responsive client-side features using React.js',
+      'Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications',
+      'Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience'
     ],
     technologies: [
-      'Node.js', 'Express.js', 'React.js', 'JavaScript', 'HTML', 'CSS', 'Material UI/ThemeUI'
+      'Node.js', 'Express.js', 'React.js', 'JavaScript', 'HTML', 'CSS', 'Material UI'
     ]
   },
   {
@@ -93,8 +110,8 @@ const experiences = [
     location: 'London, ON',
     logo: pawmirLogo,
     responsibilities: [
-      'Built the company\'s website through the integration of JavaScript, CSS, and HTML, leading to enhanced user interaction and navigation.',
-      'Implemented a robust contact information section using Node.js/Express, addressing user issues promptly.'
+      'Built the company\'s website through the integration of JavaScript, CSS, and HTML, leading to enhanced user interaction and navigation',
+      'Implemented a robust contact information section using Node.js/Express, addressing user issues promptly'
     ],
     technologies: [
       'Node.js', 'Express.js', 'JavaScript', 'HTML', 'CSS'
@@ -264,8 +281,8 @@ const About = () => {
                       animate={experienceInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
-                      <Grid container spacing={2}>
-                        <Grid item xs={12} sm={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+                      <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+                        <Box sx={{ flexShrink: 0 }}>
                           <Avatar 
                             src={experience.logo} 
                             alt={`${experience.company} logo`}
@@ -278,9 +295,8 @@ const About = () => {
                               p: 1
                             }}
                           />
-                        </Grid>
-                        <Grid item xs={12} sm={10}>
-                          <Box>
+                        </Box>
+                        <Box sx={{ flex: 1, minWidth: 0 }}>
                             <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: 'primary.main' }}>
                               {experience.position}
                             </Typography>
@@ -296,13 +312,23 @@ const About = () => {
                               </Typography>
                             </Box>
                             
-                            <List sx={{ pl: 2 }}>
+                            <Box component="ul" sx={{ 
+                              pl: '1.2rem', 
+                              m: 0, 
+                              listStyleType: 'disc', 
+                              listStylePosition: 'outside',
+                              '& li': {
+                                paddingLeft: '0.2rem',
+                                marginBottom: '0.5rem',
+                                lineHeight: 1.6
+                              }
+                            }}>
                               {experience.responsibilities.map((responsibility, idx) => (
-                                <ListItem key={idx} sx={{ display: 'list-item', py: 0.5 }}>
-                                  <ListItemText primary={responsibility} />
-                                </ListItem>
+                                <Typography component="li" key={idx} variant="body2" sx={{ display: 'list-item' }}>
+                                  {responsibility}
+                                </Typography>
                               ))}
-                            </List>
+                            </Box>
                             
                             <Box sx={{ mt: 2 }}>
                               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 600 }}>
@@ -320,9 +346,8 @@ const About = () => {
                                 ))}
                               </Box>
                             </Box>
-                          </Box>
-                        </Grid>
-                      </Grid>
+                        </Box>
+                      </Box>
                     </MotionCard>
                   </Grid>
                 ))}
