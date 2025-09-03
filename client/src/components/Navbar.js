@@ -78,7 +78,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/About-Me', icon: <HomeIcon /> },
-    { name: 'About', path: '/About-Me/about', icon: <PersonIcon /> },
+    { name: 'Experience', path: '/About-Me/experience', icon: <PersonIcon /> },
     { name: 'Projects', path: '/About-Me/projects', icon: <WorkIcon /> },
     { name: 'Contact', path: '/About-Me/contact', icon: <MailIcon /> },
     { name: 'Resume', path: '/About-Me/resume', icon: <ArticleIcon /> },

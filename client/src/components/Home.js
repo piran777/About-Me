@@ -126,7 +126,7 @@ const Home = () => {
                 </Button>
                 <Button 
                   component={Link} 
-                  to="/About-Me/about" 
+                  to="/About-Me/experience" 
                   variant="outlined" 
                   color="primary" 
                   size="large"

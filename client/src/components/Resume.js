@@ -34,10 +34,10 @@ const Resume = () => {
           sx={{ textAlign: 'center', mb: 4 }}
         >
           <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 700 }}>
-            My Resume
+            Experience
           </Typography>
           <Typography variant="h6" color="text.secondary" paragraph>
-            View or download my professional resume
+            My professional journey and technical expertise
           </Typography>
           <Button 
             variant="contained" 
@@ -186,7 +186,7 @@ const Resume = () => {
             </Box>
             
             {/* HiCoder */}
-            <Box>
+            <Box sx={{ mb: 4 }}>
               <Grid container justifyContent="space-between" alignItems="flex-start">
                 <Grid item>
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
@@ -201,7 +201,7 @@ const Resume = () => {
                     Jun 2024 – Sept 2024
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
-                    (Remote)
+                    Remote
                   </Typography>
                 </Grid>
               </Grid>
