@@ -21,7 +21,7 @@ const Resume = () => {
     threshold: 0.1,
   });
 
-  const resumePdfPath = `${process.env.PUBLIC_URL}/piran_aminullah_cv.pdf`;
+  const resumePdfPath = `${process.env.PUBLIC_URL}/Piran_Aminullah_cv.pdf`;
 
   return (
     <Box component="main" sx={{ py: 10 }}>
@@ -45,7 +45,7 @@ const Resume = () => {
             size="large" 
             startIcon={<DownloadIcon />}
             href={resumePdfPath}
-            download="piran_aminullah_cv.pdf"
+            download="Piran_Aminullah_cv.pdf"
             sx={{ mt: 2, mb: 6 }}
           >
             Download PDF
@@ -225,38 +225,38 @@ const Resume = () => {
             </Typography>
             <Divider sx={{ mb: 3 }} />
             
-            {/* Intelligent Traffic Management System */}
+            {/* GameX Studio */}
             <Box sx={{ mb: 4 }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                Intelligent Traffic Management System
+                GameX Studio - AI-Powered Game Development IDE
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                Python, Pandas, Streamlit, Git, Jira/Confluence
+                Python, React, Electron, Unity C#
               </Typography>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning
+                  Architected AI-powered IDE enabling Unity game development through natural language prompts, with Python backend, React/Electron frontend, and Unity C# bridge for real-time engine manipulation and automated script generation
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization
+                  Implemented multi-AI provider integration (GPT-4, Claude) with context-aware suggestions, intelligent debugging recommendations, and automated Unity scene management through natural language processing
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Developed comprehensive Unity Bridge system with real-time console integration, automated asset management, and seamless GameObject manipulation, transforming game development workflow efficiency
                 </Typography>
               </Box>
             </Box>
             
-            {/* ContentCraft */}
+            {/* Intelligent Traffic Management System */}
             <Box>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                ContentCraft - Full-Stack Publishing Platform
+                Intelligent Traffic Management System
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                JavaScript, React.js, Node.js/Express
+                Python, Pandas, Streamlit
               </Typography>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Engineered a comprehensive content management system with user authentication, role-based access control, dynamic post creation/editing capabilities, secure JWT authentication, and database-driven commenting system with content tagging functionality
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction
+                  Built ML traffic prediction system using random forest classifier to forecast intersection congestion patterns and developed Python heat map algorithm integrated with Google Maps API for real-time visualization
                 </Typography>
               </Box>
             </Box>
@@ -301,22 +301,22 @@ const Resume = () => {
             <Divider sx={{ mb: 3 }} />
             
             <Typography variant="body1" paragraph>
-              <strong>Languages:</strong> JavaScript, TypeScript, Java, Python, Ruby
+              <strong>Languages:</strong> JavaScript, TypeScript, Java, Python, Ruby, C#
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Frontend:</strong> ReactJS, HTML/CSS, SCSS, MaterialUI
+              <strong>Technologies:</strong> ReactJS, HTML/CSS, SCSS, MaterialUI, Electron, NodeJS/Express, Ruby on Rails 7, Springboot, Python Flask
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Backend:</strong> NodeJS/Express, Ruby on Rails 7, Springboot
+              <strong>Databases:</strong> mySQL, mongoDB, postgresql
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Databases:</strong> mySQL, mongoDB, Redis
+              <strong>Cloud & DevOps:</strong> AWS, Docker, Kubernetes, Google Cloud Platform
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Cloud & DevOps:</strong> AWS, Docker, Kubernetes, Google Cloud Platform (GCP)
+              <strong>Testing & Tools:</strong> Cucumber, RSpec, Jest, Playwright, Git, Jira/Confluence
             </Typography>
             <Typography variant="body1">
-              <strong>Testing & Tools:</strong> Cucumber/Selenium Testing, RSpec, Jest, Playwright, Git, Pandas, Jira/Confluence, Trello
+              <strong>AI/ML:</strong> Pandas, scikit learn, Pytorch
             </Typography>
           </Box>
         </MotionPaper>

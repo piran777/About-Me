@@ -33,6 +33,7 @@ import blog1 from '../Assets/blog-login.PNG';
 import music1 from '../Assets/music-1.PNG'; 
 import maze2 from '../Assets/Maze-Game-diag.PNG'; 
 import topoolgy from '../Assets/topoolgy.png';
+import gameXStudioImage from '../Assets/GameX-Studio.png';
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
@@ -40,19 +41,32 @@ const MotionCard = motion(Card);
 const projects = [
   {
     id: 1,
+    title: 'GameX Studio - AI-Powered Game Development IDE',
+    description: 'AI-powered IDE enabling Unity game development through natural language prompts with Python backend and React/Electron frontend.',
+    image: gameXStudioImage,
+    details: [
+      'Architected AI-powered IDE enabling Unity game development through natural language prompts, with Python backend, React/Electron frontend, and Unity C# bridge for real-time engine manipulation and automated script generation',
+      'Implemented multi-AI provider integration (GPT-4, Claude) with context-aware suggestions, intelligent debugging recommendations, and automated Unity scene management through natural language processing',
+      'Developed comprehensive Unity Bridge system with real-time console integration, automated asset management, and seamless GameObject manipulation, transforming game development workflow efficiency'
+    ],
+    technologies: ['Python', 'React', 'Electron', 'Unity C#', 'GPT-4', 'Claude', 'Natural Language Processing'],
+    videoUrl: null,
+    githubUrl: 'https://github.com/piran777'
+  },
+  {
+    id: 2,
     title: 'Intelligent Traffic Management System',
-    description: 'ML traffic prediction system for intersections. Uses random forest, heat maps, and Google Maps API integration.',
+    description: 'ML traffic prediction system using random forest classifier with Python heat map algorithm and Google Maps API integration.',
     image: trafficImage,
     details: [
-      'Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning.',
-      'Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization.'
+      'Built ML traffic prediction system using random forest classifier to forecast intersection congestion patterns and developed Python heat map algorithm integrated with Google Maps API for real-time visualization'
     ],
-    technologies: ['Python', 'Pandas', 'Streamlit', 'Git', 'Jira/Confluence'],
+    technologies: ['Python', 'Pandas', 'Streamlit', 'Machine Learning', 'Google Maps API'],
     videoUrl: null,
     githubUrl: 'https://github.com/piran777/Capstone'
   },
   {
-    id: 2,
+    id: 3,
     title: 'ContentCraft - Full-Stack Publishing Platform',
     description: 'Full-stack content platform with user auth. Role-based access, dynamic posts, and secure editing features.',
     image: blog1,
@@ -66,7 +80,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/Full-Stack-Blogging-Platform'
   },
   {
-    id: 3,
+    id: 4,
     title: 'NetSim - Network Protocol Analysis & Simulation',
     description: 'Network protocol analysis and simulation. Multi-host Mininet, deep packet analysis, and Python tools.',
     image: topoolgy,
@@ -80,7 +94,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/UDP-TCP-Networking'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Maze World',
     description: '2D maze game with multiple levels built in Unity. Features enemy types, AOE detection, and unique abilities.',
     image: maze2,
@@ -93,7 +107,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777'
   },
   {
-    id: 5,
+    id: 6,
     title: 'MyMusicPlayer',
     description: 'Music streaming app with playlist management. User authentication, search, and playlist editing features.',
     image: music1,
@@ -112,6 +126,8 @@ const Projects = () => {
   const theme = useTheme();
   const [selectedProject, setSelectedProject] = useState(null);
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [imageDialogOpen, setImageDialogOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const [titleRef, titleInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [projectsRef, projectsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -123,6 +139,16 @@ const Projects = () => {
 
   const handleCloseDialog = () => {
     setDialogOpen(false);
+  };
+
+  const handleImageClick = (image, title) => {
+    setSelectedImage({ src: image, alt: title });
+    setImageDialogOpen(true);
+  };
+
+  const handleCloseImageDialog = () => {
+    setImageDialogOpen(false);
+    setSelectedImage(null);
   };
 
   return (
@@ -167,7 +193,7 @@ const Projects = () => {
               <MotionCard
                 key={project.id}
                 sx={{
-                  height: 300,
+                  height: 320,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
@@ -189,13 +215,31 @@ const Projects = () => {
                   component="img"
                   image={project.image}
                   alt={project.title}
-                  sx={{ height: 100, width: '100%', objectFit: 'cover' }}
+                  sx={{ 
+                    height: 100, 
+                    width: '100%', 
+                    objectFit: 'cover',
+                    objectPosition: project.id === 1 ? 'center top' : 'center center'
+                  }}
                 />
                 <CardContent sx={{ flex: '1 1 0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', px: 1, py: 1, minHeight: 0 }}>
                   <Typography
                     variant="h6"
                     component="h2"
-                    sx={{ fontWeight: 600, fontSize: '1rem', textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', mb: 0.5 }}
+                    sx={{ 
+                      fontWeight: 600, 
+                      fontSize: '0.95rem', 
+                      textAlign: 'center', 
+                      lineHeight: 1.2,
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      mb: 0.5,
+                      minHeight: 48,
+                      maxHeight: 48
+                    }}
                   >
                     {project.title}
                   </Typography>
@@ -288,15 +332,18 @@ const Projects = () => {
               position: 'relative', 
               height: 300, 
               overflow: 'hidden',
-              backgroundColor: alpha(theme.palette.primary.main, 0.1)
+              backgroundColor: alpha(theme.palette.primary.main, 0.1),
+              cursor: 'pointer'
             }}>
               <img 
                 src={selectedProject.image} 
                 alt={selectedProject.title}
+                onClick={() => handleImageClick(selectedProject.image, selectedProject.title)}
                 style={{ 
                   width: '100%', 
                   height: '100%', 
                   objectFit: 'cover',
+                  objectPosition: selectedProject.id === 1 ? 'center top' : 'center center',
                 }}
               />
               <IconButton
@@ -394,6 +441,58 @@ const Projects = () => {
               </Button>
             </DialogActions>
           </>
+        )}
+      </Dialog>
+
+      {/* Image Popup Dialog */}
+      <Dialog
+        open={imageDialogOpen}
+        onClose={handleCloseImageDialog}
+        maxWidth="lg"
+        fullWidth
+        sx={{ 
+          '& .MuiDialog-paper': { 
+            backgroundColor: 'transparent',
+            boxShadow: 'none',
+            overflow: 'hidden'
+          }
+        }}
+      >
+        {selectedImage && (
+          <Box sx={{ 
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            p: 2
+          }}>
+            <img 
+              src={selectedImage.src} 
+              alt={selectedImage.alt}
+              style={{ 
+                maxWidth: '100%', 
+                maxHeight: '90vh', 
+                objectFit: 'contain',
+                borderRadius: '8px',
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)'
+              }}
+            />
+            <IconButton
+              onClick={handleCloseImageDialog}
+              sx={{
+                position: 'absolute',
+                top: 16,
+                right: 16,
+                color: 'white',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                '&:hover': {
+                  backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                }
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+          </Box>
         )}
       </Dialog>
     </Box>

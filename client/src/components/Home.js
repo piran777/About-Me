@@ -9,31 +9,37 @@ import profileImage from '../Assets/1711219373283.jpg';
 import westernLogo from '../Assets/Western-University-Logo.png';
 
 const skills = [
-  { name: 'React.js', category: 'frontend' },
   { name: 'JavaScript', category: 'language' },
   { name: 'TypeScript', category: 'language' },
-  { name: 'HTML/CSS', category: 'frontend' },
-  { name: 'Material-UI', category: 'frontend' },
-  { name: 'Ruby on Rails', category: 'backend' },
-  { name: 'Node.js', category: 'backend' },
-  { name: 'Express.js', category: 'backend' },
-  { name: 'MongoDB', category: 'database' },
-  { name: 'SQL', category: 'database' },
-  { name: 'Docker', category: 'devops' },
-  { name: 'AWS', category: 'cloud' },
-  { name: 'Git', category: 'tool' },
-  { name: 'Python', category: 'language' },
   { name: 'Java', category: 'language' },
+  { name: 'Python', category: 'language' },
+  { name: 'Ruby', category: 'language' },
   { name: 'C#', category: 'language' },
-  { name: 'C/C++', category: 'language' },
-  { name: 'Xcode', category: 'tool' },
+  { name: 'React.js', category: 'frontend' },
+  { name: 'HTML/CSS', category: 'frontend' },
   { name: 'SCSS', category: 'frontend' },
-  { name: 'Jest', category: 'testing' },
-  { name: 'Cucumber Rails', category: 'testing' },
+  { name: 'Material-UI', category: 'frontend' },
+  { name: 'Electron', category: 'frontend' },
+  { name: 'Node.js/Express', category: 'backend' },
+  { name: 'Ruby on Rails 7', category: 'backend' },
+  { name: 'Spring Boot', category: 'backend' },
+  { name: 'Python Flask', category: 'backend' },
+  { name: 'MySQL', category: 'database' },
+  { name: 'MongoDB', category: 'database' },
+  { name: 'PostgreSQL', category: 'database' },
+  { name: 'AWS', category: 'cloud' },
+  { name: 'Docker', category: 'devops' },
+  { name: 'Kubernetes', category: 'devops' },
+  { name: 'Google Cloud Platform', category: 'cloud' },
+  { name: 'Cucumber', category: 'testing' },
   { name: 'RSpec', category: 'testing' },
-  { name: 'ESBuild', category: 'tool' },
-  { name: 'Webpacker', category: 'tool' },
-  { name: 'Unity', category: 'tool' },
+  { name: 'Jest', category: 'testing' },
+  { name: 'Playwright', category: 'testing' },
+  { name: 'Git', category: 'tool' },
+  { name: 'Jira/Confluence', category: 'tool' },
+  { name: 'Pandas', category: 'ai' },
+  { name: 'scikit-learn', category: 'ai' },
+  { name: 'PyTorch', category: 'ai' },
 ];
 
 const MotionBox = motion(Box);
@@ -175,16 +181,22 @@ const Home = () => {
           <Card variant="outlined" sx={{ p: 4, borderRadius: 2, mb: 6, boxShadow: theme.shadows.small }}>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.05rem' }}>
               Hi there! I'm Piran, a Software Engineer with a passion for creating innovative solutions. 
-              I recently received my Bachelor's of Engineering Science in Software Engineering from Western University.
+              I recently graduated with my Bachelor's of Engineering Science in Software Engineering from Western University 
+              and completed the Western Engineering Co-op/Internship Program.
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.05rem' }}>
-              I specialize in full-stack development, working with technologies like React.js, Ruby on Rails, and Node.js. 
-              My experience spans from developing financial platforms serving 100,000+ professionals to building 
-              internationalized applications and enhancing backend infrastructure.
+              I specialize in full-stack development, working with technologies like React.js, Ruby on Rails 7, Node.js, 
+              and modern cloud platforms. My experience spans from architecting core features for major financial platforms 
+              serving 100,000+ professionals to building comprehensive schema management systems with multi-language support 
+              across 7 languages using i18n integration.
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ fontSize: '1.05rem' }}>
+              I have hands-on experience with Domain-Specific Language (DSL) processors, comprehensive testing frameworks 
+              including Cucumber, RSpec, and Jest, and cloud technologies like AWS, Docker, and Kubernetes.
             </Typography>
             <Typography variant="body1" sx={{ fontSize: '1.05rem' }}>
-              Beyond coding, I enjoy exploring new technologies, going for walks, and playing video games. 
-              I'm always excited to take on new challenges and collaborate on projects that make a positive impact.
+              Beyond coding, I enjoy exploring new technologies, machine learning projects, and building solutions that 
+              make a positive impact. I'm always excited to take on new challenges and collaborate on innovative projects.
             </Typography>
           </Card>
 
@@ -306,7 +318,7 @@ const Home = () => {
             </Box>
             <Box sx={{ width: { xs: '100%', sm: '70%' }, pl: { xs: 0, sm: 4 } }}>
               <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
-                Bachelor of Engineering Science
+                Bachelor's of Engineering Science
               </Typography>
               <Typography variant="h6" gutterBottom>
                 Software Engineering
@@ -315,9 +327,10 @@ const Home = () => {
                 Western University, London, ON
               </Typography>
               <Typography variant="body1">
-                Completed comprehensive coursework in software development, algorithms, data structures, 
-                database systems, and software project management. Applied theoretical knowledge through 
-                practical projects, including full-stack applications and AI systems.
+                Graduated April 2024. Completed comprehensive coursework including Data Structures and Algorithms, 
+                Databases, Networking, Software Engineering Design, Software Project and Process Management, 
+                Computer Information Security, Data Science/Machine Learning, Digital Logic Systems, 
+                Microprocessors/Microcomputers, Operating Systems, AI 1, AI 2, and Cloud Computing.
               </Typography>
             </Box>
           </Card>
