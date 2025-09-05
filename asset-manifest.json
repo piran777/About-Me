@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/About-Me/static/css/main.b11ec62e.css",
-    "main.js": "/About-Me/static/js/main.f3372f87.js",
+    "main.js": "/About-Me/static/js/main.6ef76218.js",
     "static/js/453.419a5d54.chunk.js": "/About-Me/static/js/453.419a5d54.chunk.js",
     "static/media/TrafficAIProject.PNG": "/About-Me/static/media/TrafficAIProject.49fe8600609661198d79.PNG",
+    "static/media/GameX-Studio.png": "/About-Me/static/media/GameX-Studio.98127052a718bd4136ed.png",
     "static/media/1711219373283.jpg": "/About-Me/static/media/1711219373283.89e8a3cf2395b31a3903.jpg",
     "static/media/music-1.PNG": "/About-Me/static/media/music-1.eef59579942e5171a970.PNG",
     "static/media/topoolgy.png": "/About-Me/static/media/topoolgy.f7e69659fcff78dfd8c8.png",
@@ -84,11 +85,11 @@
     "static/media/roboto-greek-ext-300-normal.woff": "/About-Me/static/media/roboto-greek-ext-300-normal.60729cafbded24073dfb.woff",
     "index.html": "/About-Me/index.html",
     "main.b11ec62e.css.map": "/About-Me/static/css/main.b11ec62e.css.map",
-    "main.f3372f87.js.map": "/About-Me/static/js/main.f3372f87.js.map",
+    "main.6ef76218.js.map": "/About-Me/static/js/main.6ef76218.js.map",
     "453.419a5d54.chunk.js.map": "/About-Me/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b11ec62e.css",
-    "static/js/main.f3372f87.js"
+    "static/js/main.6ef76218.js"
   ]
 }
