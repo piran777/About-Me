@@ -110,41 +110,8 @@ const Resume = () => {
                 <Typography component="li" variant="body2" paragraph>
                   Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment
                 </Typography>
-              </Box>
-            </Box>
-            
-            {/* Zenex Digital Solutions - Freelance Software Engineer */}
-            <Box sx={{ mb: 4 }}>
-              <Grid container justifyContent="space-between" alignItems="flex-start">
-                <Grid item>
-                  <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                    Freelance Software Engineer
-                  </Typography>
-                  <Typography variant="subtitle1">
-                    Zenex Digital Solutions
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="body2" color="text.secondary">
-                    Jan 2025 – Present
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" align="right">
-                    London, ON
-                  </Typography>
-                </Grid>
-              </Grid>
-              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Developed custom websites and web applications for small to medium-sized businesses, focusing on responsive design and user experience optimization to drive client engagement and conversions
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Built and maintained e-commerce platforms using modern web technologies, implementing secure payment processing and inventory management systems for local Ontario businesses
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Designed and implemented SEO-optimized websites with clean code architecture, improving client search engine rankings and online visibility through technical SEO best practices
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Collaborated directly with clients to gather requirements, provide technical consultation, and deliver cost-effective digital solutions tailored to their specific business needs and budgets
+                  <strong>Technologies Used:</strong> Ruby on Rails 6/7, React.js, JavaScript, TypeScript, i18n, GitLab, Cucumber, RSpec, Jest, Material-UI, Docker, AWS, Redux, Redis, Honeybadger, Okta
                 </Typography>
               </Box>
             </Box>
@@ -180,7 +147,7 @@ const Resume = () => {
                   Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Gained foundational experience in full-stack development and client management, preparing for advanced financial platform contracting work
+                  <strong>Technologies Used:</strong> Ruby on Rails 6/7, React.js, React Native, Node.js, JavaScript, TypeScript, i18n, GitLab, Cucumber, RSpec, Jest, Material-UI, Docker, AWS, Redux, Redis
                 </Typography>
               </Box>
             </Box>
@@ -213,7 +180,10 @@ const Resume = () => {
                   Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Diagnosed and resolved critical performance issues, leading to significant improvements in application responsiveness and user experience
+                  Diagnosed and resolved performance bottlenecks in Node.js applications, improving application responsiveness and user experience
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  <strong>Technologies Used:</strong> Node.js, Express.js, React.js, JavaScript, HTML, CSS, Material UI/ThemeUI
                 </Typography>
               </Box>
             </Box>
@@ -225,38 +195,41 @@ const Resume = () => {
             </Typography>
             <Divider sx={{ mb: 3 }} />
             
-            {/* GameX Studio */}
-            <Box sx={{ mb: 4 }}>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                GameX Studio - AI-Powered Game Development IDE
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                Python, React, Electron, Unity C#
-              </Typography>
-              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
-                <Typography component="li" variant="body2" paragraph>
-                  Architected AI-powered IDE enabling Unity game development through natural language prompts, with Python backend, React/Electron frontend, and Unity C# bridge for real-time engine manipulation and automated script generation
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Implemented multi-AI provider integration (GPT-4, Claude) with context-aware suggestions, intelligent debugging recommendations, and automated Unity scene management through natural language processing
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Developed comprehensive Unity Bridge system with real-time console integration, automated asset management, and seamless GameObject manipulation, transforming game development workflow efficiency
-                </Typography>
-              </Box>
-            </Box>
-            
             {/* Intelligent Traffic Management System */}
-            <Box>
+            <Box sx={{ mb: 4 }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
                 Intelligent Traffic Management System
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                Python, Pandas, Streamlit
+                Python, Pandas, Streamlit, Git, Jira/Confluence
               </Typography>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Built ML traffic prediction system using random forest classifier to forecast intersection congestion patterns and developed Python heat map algorithm integrated with Google Maps API for real-time visualization
+                  Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization
+                </Typography>
+              </Box>
+            </Box>
+            
+            {/* ContentCraft */}
+            <Box>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                ContentCraft - Full-Stack Publishing Platform
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                JavaScript, React.js, Node.js/Express, RESTful APIs
+              </Typography>
+              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
+                <Typography component="li" variant="body2" paragraph>
+                  Engineered a comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Implemented secure user registration, JWT authentication, and database-driven commenting system with content tagging functionality
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction
                 </Typography>
               </Box>
             </Box>
@@ -290,7 +263,7 @@ const Resume = () => {
               <strong>Western Engineering Co-op/Internship Program</strong>
             </Typography>
             <Typography variant="body2" sx={{ mt: 1 }}>
-              <strong>Course Work:</strong> Data Structures and Algorithms, Databases, Networking, Software Engineering Design, Software Project and Process Management, Software Design, Computer Information Security, Data Science/Machine Learning, Digital Logic Systems, Microprocessors/Microcomputers, Operating Systems, AI 1, AI 2, Cloud Computing
+              <strong>Course Work:</strong> Data Structures and Algorithms, Databases, Networking, Software Engineering Design, Software Project and Process Management, Software Design, Computer Information Security, Data Science/Machine Learning, Digital Logic Systems, Microprocessors/Microcomputers, Operating Systems, Artificial Intelligence I & II, Cloud Computing
             </Typography>
           </Box>
           
@@ -301,22 +274,25 @@ const Resume = () => {
             <Divider sx={{ mb: 3 }} />
             
             <Typography variant="body1" paragraph>
-              <strong>Languages:</strong> JavaScript, TypeScript, Java, Python, Ruby, C#
+              <strong>Languages:</strong> JavaScript, TypeScript, Python, Ruby, Java, C/C++, C#
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Technologies:</strong> ReactJS, HTML/CSS, SCSS, MaterialUI, Electron, NodeJS/Express, Ruby on Rails 7, Springboot, Python Flask
+              <strong>Frontend:</strong> React.js, React Native, HTML/CSS, Material-UI, SCSS
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Databases:</strong> mySQL, mongoDB, postgresql
+              <strong>Backend:</strong> Node.js/Express, Ruby on Rails 6/7, Spring Boot, RESTful APIs
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Cloud & DevOps:</strong> AWS, Docker, Kubernetes, Google Cloud Platform
+              <strong>Databases:</strong> MySQL, MongoDB, Redis
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Testing & Tools:</strong> Cucumber, RSpec, Jest, Playwright, Git, Jira/Confluence
+              <strong>DevOps & Cloud:</strong> Docker, Kubernetes, AWS, GCP, GitLab
+            </Typography>
+            <Typography variant="body1" paragraph>
+              <strong>Tools & Testing:</strong> Git, Cucumber, Selenium, RSpec, Jest, Jira/Confluence, Wireshark, Mininet, Honeybadger, Okta
             </Typography>
             <Typography variant="body1">
-              <strong>AI/ML:</strong> Pandas, scikit learn, Pytorch
+              <strong>Libraries:</strong> Pandas, Streamlit, i18n, Redux
             </Typography>
           </Box>
         </MotionPaper>
