@@ -32,10 +32,9 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap', mt: 1 }}>
               <Link component={RouterLink} to="/About-Me" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Home</Link>
-              <Link component={RouterLink} to="/About-Me/experience" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Experience</Link>
+              <Link component={RouterLink} to="/About-Me/resume" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Resume</Link>
               <Link component={RouterLink} to="/About-Me/projects" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Projects</Link>
               <Link component={RouterLink} to="/About-Me/contact" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Contact</Link>
-              <Link component={RouterLink} to="/About-Me/resume" color="inherit" underline="hover" sx={{ fontWeight: 500, fontSize: '1rem', px: 1, transition: 'color 0.2s', '&:hover': { color: 'secondary.main' } }}>Resume</Link>
             </Box>
           </Grid>
           <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>

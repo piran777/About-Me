@@ -56,24 +56,25 @@ const projects = [
   {
     id: 2,
     title: 'Intelligent Traffic Management System',
-    description: 'ML traffic prediction system using random forest classifier with Python heat map algorithm and Google Maps API integration.',
+    description: 'ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns.',
     image: trafficImage,
     details: [
-      'Built ML traffic prediction system using random forest classifier to forecast intersection congestion patterns and developed Python heat map algorithm integrated with Google Maps API for real-time visualization'
+      'Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning.',
+      'Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization.'
     ],
-    technologies: ['Python', 'Pandas', 'Streamlit', 'Machine Learning', 'Google Maps API'],
+    technologies: ['Python', 'Pandas', 'Streamlit', 'Git', 'Jira/Confluence'],
     videoUrl: null,
     githubUrl: 'https://github.com/piran777/Capstone'
   },
   {
     id: 3,
     title: 'ContentCraft - Full-Stack Publishing Platform',
-    description: 'Full-stack content platform with user auth. Role-based access, dynamic posts, and secure editing features.',
+    description: 'Comprehensive content management system with user authentication, role-based access control, and dynamic post creation capabilities.',
     image: blog1,
     details: [
-      'Engineered a comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities.',
-      'Implemented secure user registration, JWT authentication, and database-driven commenting system with content tagging functionality.',
-      'Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction.'
+      'Engineered a comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities',
+      'Implemented secure user registration, JWT authentication, and database-driven commenting system with content tagging functionality',
+      'Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction'
     ],
     technologies: ['JavaScript', 'React.js', 'Node.js/Express', 'Authentication Middleware', 'Database Integration', 'RESTful APIs'],
     videoUrl: null,

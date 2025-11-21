@@ -11,35 +11,42 @@ import westernLogo from '../Assets/Western-University-Logo.png';
 const skills = [
   { name: 'JavaScript', category: 'language' },
   { name: 'TypeScript', category: 'language' },
-  { name: 'Java', category: 'language' },
   { name: 'Python', category: 'language' },
   { name: 'Ruby', category: 'language' },
+  { name: 'Java', category: 'language' },
+  { name: 'C/C++', category: 'language' },
   { name: 'C#', category: 'language' },
   { name: 'React.js', category: 'frontend' },
+  { name: 'React Native', category: 'frontend' },
   { name: 'HTML/CSS', category: 'frontend' },
-  { name: 'SCSS', category: 'frontend' },
   { name: 'Material-UI', category: 'frontend' },
-  { name: 'Electron', category: 'frontend' },
+  { name: 'SCSS', category: 'frontend' },
   { name: 'Node.js/Express', category: 'backend' },
-  { name: 'Ruby on Rails 7', category: 'backend' },
+  { name: 'Ruby on Rails 6/7', category: 'backend' },
   { name: 'Spring Boot', category: 'backend' },
-  { name: 'Python Flask', category: 'backend' },
+  { name: 'RESTful APIs', category: 'backend' },
   { name: 'MySQL', category: 'database' },
   { name: 'MongoDB', category: 'database' },
-  { name: 'PostgreSQL', category: 'database' },
-  { name: 'AWS', category: 'cloud' },
+  { name: 'Redis', category: 'database' },
   { name: 'Docker', category: 'devops' },
   { name: 'Kubernetes', category: 'devops' },
-  { name: 'Google Cloud Platform', category: 'cloud' },
+  { name: 'AWS', category: 'cloud' },
+  { name: 'GCP', category: 'cloud' },
+  { name: 'GitLab', category: 'tool' },
+  { name: 'Git', category: 'tool' },
   { name: 'Cucumber', category: 'testing' },
+  { name: 'Selenium', category: 'testing' },
   { name: 'RSpec', category: 'testing' },
   { name: 'Jest', category: 'testing' },
-  { name: 'Playwright', category: 'testing' },
-  { name: 'Git', category: 'tool' },
   { name: 'Jira/Confluence', category: 'tool' },
-  { name: 'Pandas', category: 'ai' },
-  { name: 'scikit-learn', category: 'ai' },
-  { name: 'PyTorch', category: 'ai' },
+  { name: 'Wireshark', category: 'tool' },
+  { name: 'Mininet', category: 'tool' },
+  { name: 'Honeybadger', category: 'tool' },
+  { name: 'Okta', category: 'tool' },
+  { name: 'Pandas', category: 'library' },
+  { name: 'Streamlit', category: 'library' },
+  { name: 'i18n', category: 'library' },
+  { name: 'Redux', category: 'library' },
 ];
 
 const MotionBox = motion(Box);
@@ -132,12 +139,12 @@ const Home = () => {
                 </Button>
                 <Button 
                   component={Link} 
-                  to="/About-Me/experience" 
+                  to="/About-Me/resume" 
                   variant="outlined" 
                   color="primary" 
                   size="large"
                 >
-                  View Experience
+                  View Resume
                 </Button>
               </Stack>
             </MotionGrid>
@@ -185,14 +192,14 @@ const Home = () => {
               and completed the Western Engineering Co-op/Internship Program.
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.05rem' }}>
-              I specialize in full-stack development, working with technologies like React.js, Ruby on Rails 7, Node.js, 
+              I specialize in full-stack development, working with technologies like React.js, React Native, Ruby on Rails 6/7, Node.js, 
               and modern cloud platforms. My experience spans from architecting core features for major financial platforms 
               serving 100,000+ professionals to building comprehensive schema management systems with multi-language support 
               across 7 languages using i18n integration.
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.05rem' }}>
               I have hands-on experience with Domain-Specific Language (DSL) processors, comprehensive testing frameworks 
-              including Cucumber, RSpec, and Jest, and cloud technologies like AWS, Docker, and Kubernetes.
+              including Cucumber, RSpec, and Jest, and cloud technologies like Docker, Kubernetes, AWS, and GCP.
             </Typography>
             <Typography variant="body1" sx={{ fontSize: '1.05rem' }}>
               Beyond coding, I enjoy exploring new technologies, machine learning projects, and building solutions that 
@@ -329,8 +336,8 @@ const Home = () => {
               <Typography variant="body1">
                 Graduated April 2024. Completed comprehensive coursework including Data Structures and Algorithms, 
                 Databases, Networking, Software Engineering Design, Software Project and Process Management, 
-                Computer Information Security, Data Science/Machine Learning, Digital Logic Systems, 
-                Microprocessors/Microcomputers, Operating Systems, AI 1, AI 2, and Cloud Computing.
+                Software Design, Computer Information Security, Data Science/Machine Learning, Digital Logic Systems, 
+                Microprocessors/Microcomputers, Operating Systems, Artificial Intelligence I & II, and Cloud Computing.
               </Typography>
             </Box>
           </Card>
