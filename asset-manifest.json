@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/About-Me/static/css/main.b11ec62e.css",
-    "main.js": "/About-Me/static/js/main.e6a27d2c.js",
+    "main.js": "/About-Me/static/js/main.f0bf30ba.js",
     "static/js/453.419a5d54.chunk.js": "/About-Me/static/js/453.419a5d54.chunk.js",
     "static/media/TrafficAIProject.PNG": "/About-Me/static/media/TrafficAIProject.49fe8600609661198d79.PNG",
     "static/media/GameX-Studio.png": "/About-Me/static/media/GameX-Studio.98127052a718bd4136ed.png",
@@ -84,11 +84,11 @@
     "static/media/roboto-greek-ext-300-normal.woff": "/About-Me/static/media/roboto-greek-ext-300-normal.60729cafbded24073dfb.woff",
     "index.html": "/About-Me/index.html",
     "main.b11ec62e.css.map": "/About-Me/static/css/main.b11ec62e.css.map",
-    "main.e6a27d2c.js.map": "/About-Me/static/js/main.e6a27d2c.js.map",
+    "main.f0bf30ba.js.map": "/About-Me/static/js/main.f0bf30ba.js.map",
     "453.419a5d54.chunk.js.map": "/About-Me/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b11ec62e.css",
-    "static/js/main.e6a27d2c.js"
+    "static/js/main.f0bf30ba.js"
   ]
 }
