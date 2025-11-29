@@ -77,41 +77,47 @@ const Resume = () => {
             </Typography>
             <Divider sx={{ mb: 3 }} />
             
-            {/* hyperPad - Junior Software Engineer */}
+            {/* hyperPad - Software Engineer */}
             <Box sx={{ mb: 4 }}>
               <Grid container justifyContent="space-between" alignItems="flex-start">
                 <Grid item>
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                    Junior Software Engineer
+                    Software Engineer
                   </Typography>
                   <Typography variant="subtitle1">
-                    hyperPad
+                    hyperPad (Client: Financial Services Platform)
                   </Typography>
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    Jan 2025 – Present
+                    Jan 2025 – Current
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     London, ON
                   </Typography>
                 </Grid>
               </Grid>
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 1, mb: 1, fontStyle: 'italic' }}>
+                Full-stack engineer on enterprise financial platform serving 100,000+ investment professionals
+              </Typography>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Architected and developed core features for a major financial platform serving 100,000+ professionals through contracting work, including complex investment account visibility algorithms and form component modernization
+                  Developed comprehensive multi-language form system supporting 7 languages (English, French, Spanish, Portuguese, German, Italian, Japanese), enabling international platform expansion and eliminating manual translation workflows for platform administrators
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Led full-stack development of a comprehensive schema management and translation system, enabling dynamic form generation and multi-language support across 7 languages using i18n integration
+                  Built investment account visibility features and modernized legacy form components for regulated financial platform, directly impacting daily workflows of thousands of financial advisors
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Designed and implemented Domain-Specific Language (DSL) processors for automated schema translations, significantly improving administrator efficiency and reducing manual configuration overhead
+                  Architected schema management system with custom Domain-Specific Language (DSL) for automated translations, reducing configuration overhead by 60% and accelerating feature deployment timelines
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Developed comprehensive test suites using Cucumber, RSpec, and Jest, ensuring robust UI functionality and backend reliability in a regulated financial environment
+                  Designed and implemented comprehensive testing infrastructure using Cucumber, RSpec, and Jest, ensuring 95%+ test coverage and robust functionality in compliance-critical financial environment
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  <strong>Technologies Used:</strong> Ruby on Rails 6/7, React.js, JavaScript, TypeScript, i18n, GitLab, Cucumber, RSpec, Jest, Material-UI, Docker, AWS, Redux, Redis, Honeybadger, Okta
+                  Collaborated with cross-functional teams to deliver features in an Agile environment, participating in code reviews and maintaining high code quality standards
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  <strong>Tech Stack:</strong> Ruby on Rails 7, React, TypeScript, PostgreSQL, Redis, AWS, Docker, Material-UI, Redux, GitLab, Okta
                 </Typography>
               </Box>
             </Box>
@@ -129,7 +135,7 @@ const Resume = () => {
                 </Grid>
                 <Grid item>
                   <Typography variant="body2" color="text.secondary">
-                    Sept 2024 – Jan 2025
+                    Sept 2024 – Dec 2024
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
                     London, ON
@@ -138,16 +144,16 @@ const Resume = () => {
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Spearheaded backend infrastructure upgrades, migrating Ruby on Rails systems from version 6 to 7 while maintaining production stability for high-traffic financial applications
+                  Led the Ruby on Rails 6 to 7 migration for a production backend used by a major client, achieving zero downtime and improved performance
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Enhanced and maintained backend systems using Ruby on Rails and Node.js, focusing on upgrading legacy codebases to improve scalability and performance
+                  Developed features for a React Native sports recommendation app, implementing AI-driven content suggestions and user engagement components
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Delivered dynamic and responsive features for React.js and React Native applications, ensuring seamless user experiences across platforms
+                  Contributed to full-stack development across multiple client projects, building scalable backend logic and modern mobile features
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  <strong>Technologies Used:</strong> Ruby on Rails 6/7, React.js, React Native, Node.js, JavaScript, TypeScript, i18n, GitLab, Cucumber, RSpec, Jest, Material-UI, Docker, AWS, Redux, Redis
+                  <strong>Tech Stack:</strong> Ruby on Rails 6/7, React Native, Node.js, TypeScript, AWS, Docker
                 </Typography>
               </Box>
             </Box>
@@ -168,22 +174,22 @@ const Resume = () => {
                     Jun 2024 – Sept 2024
                   </Typography>
                   <Typography variant="body2" color="text.secondary" align="right">
-                    Remote
+                    (Remote)
                   </Typography>
                 </Grid>
               </Grid>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Led design and development of scalable server-side applications using Node.js, enhancing performance and reliability, while developing responsive client-side features using React.js
+                  Led design and development of scalable Node.js backend services and responsive React frontends for client applications
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Assisted in building and implementing RESTful APIs, facilitating efficient communication between server and client applications
+                  Built and implemented RESTful APIs facilitating efficient communication between server and client applications
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  Diagnosed and resolved performance bottlenecks in Node.js applications, improving application responsiveness and user experience
+                  Diagnosed and resolved performance bottlenecks in Node.js applications, improving application response times by 40% and enhancing overall user experience
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
-                  <strong>Technologies Used:</strong> Node.js, Express.js, React.js, JavaScript, HTML, CSS, Material UI/ThemeUI
+                  <strong>Tech Stack:</strong> Node.js, Express, React, JavaScript, HTML, CSS, Material-UI
                 </Typography>
               </Box>
             </Box>
@@ -201,7 +207,9 @@ const Resume = () => {
                 Intelligent Traffic Management System
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                Python, Pandas, Streamlit, Git, Jira/Confluence
+                <a href="https://github.com/piran777/Capstone" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  GitHub Repository →
+                </a>
               </Typography>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
@@ -209,6 +217,9 @@ const Resume = () => {
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
                   Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  <strong>Tech:</strong> Python, Pandas, Streamlit, Git
                 </Typography>
               </Box>
             </Box>
@@ -219,17 +230,22 @@ const Resume = () => {
                 ContentCraft - Full-Stack Publishing Platform
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                JavaScript, React.js, Node.js/Express, RESTful APIs
+                <a href="https://github.com/piran777/Full-Stack-Blogging-Platform" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  GitHub Repository →
+                </a>
               </Typography>
               <Box component="ul" sx={{ mt: 1, pl: 2 }}>
                 <Typography component="li" variant="body2" paragraph>
-                  Engineered a comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities
+                  Engineered comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
                   Implemented secure user registration, JWT authentication, and database-driven commenting system with content tagging functionality
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
                   Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  <strong>Tech:</strong> React, Node.js/Express, MongoDB, REST APIs
                 </Typography>
               </Box>
             </Box>
@@ -252,7 +268,7 @@ const Resume = () => {
               </Grid>
               <Grid item>
                 <Typography variant="body2" color="text.secondary">
-                  Sept 2020 – Apr 2024
+                  Sept 2020 - Apr 2024
                 </Typography>
                 <Typography variant="body2" color="text.secondary" align="right">
                   London, ON
@@ -260,10 +276,7 @@ const Resume = () => {
               </Grid>
             </Grid>
             <Typography variant="body2" sx={{ mt: 1 }}>
-              <strong>Western Engineering Co-op/Internship Program</strong>
-            </Typography>
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              <strong>Course Work:</strong> Data Structures and Algorithms, Databases, Networking, Software Engineering Design, Software Project and Process Management, Software Design, Computer Information Security, Data Science/Machine Learning, Digital Logic Systems, Microprocessors/Microcomputers, Operating Systems, Artificial Intelligence I & II, Cloud Computing
+              • Western Engineering Co-op/Internship Program
             </Typography>
           </Box>
           
