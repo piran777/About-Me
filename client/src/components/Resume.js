@@ -197,12 +197,38 @@ const Resume = () => {
           
           <Box sx={{ mb: 5 }}>
             <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
-              Selected Projects
+              Engineering Projects
             </Typography>
             <Divider sx={{ mb: 3 }} />
             
-            {/* Intelligent Traffic Management System */}
+            {/* Postmark - Unified Email Client */}
             <Box sx={{ mb: 4 }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                Postmark - Unified Email Client
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                <a href="https://github.com/piran777/Postmark-" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  GitHub Repository →
+                </a>
+              </Typography>
+              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
+                <Typography component="li" variant="body2" paragraph>
+                  Built a unified email client aggregating multiple Gmail and Outlook accounts into a single inbox, featuring OAuth 2.0 account linking, on-demand email sync, and thread-level conversation views
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Implemented multi-provider email synchronization using Google Gmail API and Microsoft Graph API with automatic token refresh, delta sync via Gmail History API, and robust error recovery
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Developed Gmail-inspired UI with keyboard navigation, real-time search, filter popovers, collapsible conversation threads, and dark/light mode theming
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  <strong>Tech:</strong> Next.js, TypeScript, React, Prisma, PostgreSQL, Tailwind CSS, NextAuth.js, Google APIs, Microsoft Graph API
+                </Typography>
+              </Box>
+            </Box>
+            
+            {/* Intelligent Traffic Management System */}
+            <Box>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
                 Intelligent Traffic Management System
               </Typography>
@@ -220,32 +246,6 @@ const Resume = () => {
                 </Typography>
                 <Typography component="li" variant="body2" paragraph>
                   <strong>Tech:</strong> Python, Pandas, Streamlit, Git
-                </Typography>
-              </Box>
-            </Box>
-            
-            {/* ContentCraft */}
-            <Box>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                ContentCraft - Full-Stack Publishing Platform
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                <a href="https://github.com/piran777/Full-Stack-Blogging-Platform" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  GitHub Repository →
-                </a>
-              </Typography>
-              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
-                <Typography component="li" variant="body2" paragraph>
-                  Engineered comprehensive content management system with user authentication, role-based access control, and dynamic post creation/editing capabilities
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Implemented secure user registration, JWT authentication, and database-driven commenting system with content tagging functionality
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Built responsive frontend interface and RESTful API backend, enabling seamless content publishing and user interaction
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  <strong>Tech:</strong> React, Node.js/Express, MongoDB, REST APIs
                 </Typography>
               </Box>
             </Box>
@@ -282,7 +282,7 @@ const Resume = () => {
           
           <Box>
             <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
-              Technical Skills
+              Technology
             </Typography>
             <Divider sx={{ mb: 3 }} />
             
@@ -290,22 +290,22 @@ const Resume = () => {
               <strong>Languages:</strong> JavaScript, TypeScript, Python, Ruby, Java, C/C++, C#
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Frontend:</strong> React.js, React Native, HTML/CSS, Material-UI, SCSS
+              <strong>Frontend:</strong> React.js, React Native, HTML/CSS, Material-UI, SCSS, Next.js, Tailwind CSS
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Backend:</strong> Node.js/Express, Ruby on Rails 6/7, Spring Boot, RESTful APIs
+              <strong>Backend:</strong> Node.js/Express, Ruby on Rails 6/7, Spring Boot, RESTful APIs, Prisma, NextAuth.js
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Databases:</strong> MySQL, MongoDB, Redis
+              <strong>Databases:</strong> MySQL, MongoDB, Redis, PostgreSQL
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>DevOps & Cloud:</strong> Docker, Kubernetes, AWS, GCP, GitLab
+              <strong>DevOps & Cloud:</strong> Docker, Kubernetes, AWS, GCP, GitLab, Vercel
             </Typography>
             <Typography variant="body1" paragraph>
               <strong>Tools & Testing:</strong> Git, Cucumber, Selenium, RSpec, Jest, Jira/Confluence, Wireshark, Mininet, Honeybadger, Okta
             </Typography>
             <Typography variant="body1">
-              <strong>Libraries:</strong> Pandas, Streamlit, i18n, Redux
+              <strong>Libraries:</strong> Pandas, Streamlit, i18n, Redux, googleapis, next-auth
             </Typography>
           </Box>
         </MotionPaper>

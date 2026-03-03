@@ -34,6 +34,7 @@ import music1 from '../Assets/music-1.PNG';
 import maze2 from '../Assets/Maze-Game-diag.PNG'; 
 import topoolgy from '../Assets/topoolgy.png';
 import gameXStudioImage from '../Assets/GameX-Studio.png';
+import postmarkImage from '../Assets/postmark.png';
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
@@ -41,6 +42,20 @@ const MotionCard = motion(Card);
 const projects = [
   {
     id: 1,
+    title: 'Postmark - Unified Email Client',
+    description: 'Unified email client aggregating Gmail and Outlook accounts into a single inbox with OAuth 2.0, real-time sync, and Gmail-inspired UI.',
+    image: postmarkImage,
+    details: [
+      'Built a unified email client aggregating multiple Gmail and Outlook accounts into a single inbox, featuring OAuth 2.0 account linking, on-demand email sync, and thread-level conversation views',
+      'Implemented multi-provider email synchronization using Google Gmail API and Microsoft Graph API with automatic token refresh, delta sync via Gmail History API, and robust error recovery',
+      'Developed Gmail-inspired UI with keyboard navigation, real-time search, filter popovers, collapsible conversation threads, and dark/light mode theming'
+    ],
+    technologies: ['Next.js', 'TypeScript', 'React', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'NextAuth.js', 'Google APIs', 'Microsoft Graph API'],
+    videoUrl: null,
+    githubUrl: 'https://github.com/piran777/Postmark-'
+  },
+  {
+    id: 2,
     title: 'GameX Studio - AI-Powered Game Development IDE',
     description: 'AI-powered IDE enabling Unity game development through natural language prompts with Python backend and React/Electron frontend.',
     image: gameXStudioImage,
@@ -54,7 +69,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Intelligent Traffic Management System',
     description: 'ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns.',
     image: trafficImage,
@@ -67,7 +82,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/Capstone'
   },
   {
-    id: 3,
+    id: 4,
     title: 'ContentCraft - Full-Stack Publishing Platform',
     description: 'Comprehensive content management system with user authentication, role-based access control, and dynamic post creation capabilities.',
     image: blog1,
@@ -81,7 +96,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/Full-Stack-Blogging-Platform'
   },
   {
-    id: 4,
+    id: 5,
     title: 'NetSim - Network Protocol Analysis & Simulation',
     description: 'Network protocol analysis and simulation. Multi-host Mininet, deep packet analysis, and Python tools.',
     image: topoolgy,
@@ -95,7 +110,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/UDP-TCP-Networking'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Maze World',
     description: '2D maze game with multiple levels built in Unity. Features enemy types, AOE detection, and unique abilities.',
     image: maze2,
@@ -108,7 +123,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777'
   },
   {
-    id: 6,
+    id: 7,
     title: 'MyMusicPlayer',
     description: 'Music streaming app with playlist management. User authentication, search, and playlist editing features.',
     image: music1,
