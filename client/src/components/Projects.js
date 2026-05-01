@@ -25,7 +25,8 @@ import {
   Close as CloseIcon, 
   Code as CodeIcon,
   Visibility as VisibilityIcon,
-  GitHub as GitHubIcon
+  GitHub as GitHubIcon,
+  SmartToy as SmartToyIcon
 } from '@mui/icons-material';
 
 import trafficImage from '../Assets/TrafficAIProject.PNG';
@@ -35,6 +36,7 @@ import maze2 from '../Assets/Maze-Game-diag.PNG';
 import topoolgy from '../Assets/topoolgy.png';
 import gameXStudioImage from '../Assets/GameX-Studio.png';
 import postmarkImage from '../Assets/postmark.png';
+import autoStandupBotImage from '../Assets/auto-standup-bot.png';
 
 const MotionBox = motion(Box);
 const MotionCard = motion(Card);
@@ -42,6 +44,20 @@ const MotionCard = motion(Card);
 const projects = [
   {
     id: 1,
+    title: 'Auto Standup Bot',
+    description: 'Atlassian Forge app that generates AI-powered daily standups from Jira and GitHub activity, delivered to Slack or Microsoft Teams.',
+    image: autoStandupBotImage,
+    details: [
+      'Built and published an Atlassian Forge app that generates AI-powered daily standups from Jira and GitHub activity, delivering formatted updates to Slack or Microsoft Teams on schedule or on demand',
+      'Implemented Slack OAuth 2.0 with automatic channel discovery and engineered a noise suppression system that filters Jira changelogs by user activity signals, eliminating irrelevant ticket updates'
+    ],
+    technologies: ['TypeScript', 'React', 'Atlassian Forge', 'Atlaskit', 'OpenAI API', 'Slack OAuth 2.0', 'GitHub API'],
+    videoUrl: 'https://www.youtube.com/embed/ES-rX_oDP_c',
+    githubUrl: 'https://github.com/piran777',
+    liveUrl: 'https://marketplace.atlassian.com/apps/542311656/auto-standup-bot'
+  },
+  {
+    id: 2,
     title: 'Postmark - Unified Email Client',
     description: 'Unified email client aggregating Gmail and Outlook accounts into a single inbox with OAuth 2.0, real-time sync, and Gmail-inspired UI.',
     image: postmarkImage,
@@ -55,7 +71,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/Postmark-'
   },
   {
-    id: 2,
+    id: 3,
     title: 'GameX Studio - AI-Powered Game Development IDE',
     description: 'AI-powered IDE enabling Unity game development through natural language prompts with Python backend and React/Electron frontend.',
     image: gameXStudioImage,
@@ -69,7 +85,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Intelligent Traffic Management System',
     description: 'ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns.',
     image: trafficImage,
@@ -82,7 +98,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/Capstone'
   },
   {
-    id: 4,
+    id: 5,
     title: 'ContentCraft - Full-Stack Publishing Platform',
     description: 'Comprehensive content management system with user authentication, role-based access control, and dynamic post creation capabilities.',
     image: blog1,
@@ -96,7 +112,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/Full-Stack-Blogging-Platform'
   },
   {
-    id: 5,
+    id: 6,
     title: 'NetSim - Network Protocol Analysis & Simulation',
     description: 'Network protocol analysis and simulation. Multi-host Mininet, deep packet analysis, and Python tools.',
     image: topoolgy,
@@ -110,7 +126,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777/UDP-TCP-Networking'
   },
   {
-    id: 6,
+    id: 7,
     title: 'Maze World',
     description: '2D maze game with multiple levels built in Unity. Features enemy types, AOE detection, and unique abilities.',
     image: maze2,
@@ -123,7 +139,7 @@ const projects = [
     githubUrl: 'https://github.com/piran777'
   },
   {
-    id: 7,
+    id: 8,
     title: 'MyMusicPlayer',
     description: 'Music streaming app with playlist management. User authentication, search, and playlist editing features.',
     image: music1,
@@ -227,17 +243,30 @@ const Projects = () => {
                 animate={projectsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <CardMedia
-                  component="img"
-                  image={project.image}
-                  alt={project.title}
-                  sx={{ 
+                {project.image ? (
+                  <CardMedia
+                    component="img"
+                    image={project.image}
+                    alt={project.title}
+                    sx={{ 
+                      height: 100, 
+                      width: '100%', 
+                      objectFit: 'cover',
+                      objectPosition: project.id === 2 ? 'center top' : 'center center'
+                    }}
+                  />
+                ) : (
+                  <Box sx={{ 
                     height: 100, 
                     width: '100%', 
-                    objectFit: 'cover',
-                    objectPosition: project.id === 1 ? 'center top' : 'center center'
-                  }}
-                />
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`
+                  }}>
+                    <SmartToyIcon sx={{ fontSize: 40, color: 'white', opacity: 0.9 }} />
+                  </Box>
+                )}
                 <CardContent sx={{ flex: '1 1 0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', px: 1, py: 1, minHeight: 0 }}>
                   <Typography
                     variant="h6"
@@ -349,19 +378,32 @@ const Projects = () => {
               height: 300, 
               overflow: 'hidden',
               backgroundColor: alpha(theme.palette.primary.main, 0.1),
-              cursor: 'pointer'
+              cursor: selectedProject.image ? 'pointer' : 'default'
             }}>
-              <img 
-                src={selectedProject.image} 
-                alt={selectedProject.title}
-                onClick={() => handleImageClick(selectedProject.image, selectedProject.title)}
-                style={{ 
+              {selectedProject.image ? (
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  onClick={() => handleImageClick(selectedProject.image, selectedProject.title)}
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    objectPosition: selectedProject.id === 2 ? 'center top' : 'center center',
+                  }}
+                />
+              ) : (
+                <Box sx={{ 
                   width: '100%', 
                   height: '100%', 
-                  objectFit: 'cover',
-                  objectPosition: selectedProject.id === 1 ? 'center top' : 'center center',
-                }}
-              />
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`
+                }}>
+                  <SmartToyIcon sx={{ fontSize: 80, color: 'white', opacity: 0.9 }} />
+                </Box>
+              )}
               <IconButton
                 onClick={handleCloseDialog}
                 sx={{

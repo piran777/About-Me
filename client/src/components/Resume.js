@@ -200,6 +200,29 @@ const Resume = () => {
               Engineering Projects
             </Typography>
             <Divider sx={{ mb: 3 }} />
+
+            {/* Auto Standup Bot */}
+            <Box sx={{ mb: 4 }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                Auto Standup Bot - Atlassian Marketplace App
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                <a href="https://marketplace.atlassian.com/apps/542311656/auto-standup-bot" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
+                  Atlassian Marketplace →
+                </a>
+              </Typography>
+              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
+                <Typography component="li" variant="body2" paragraph>
+                  Built and published an Atlassian Forge app that generates AI-powered daily standups from Jira and GitHub activity, delivering formatted updates to Slack or Microsoft Teams on schedule or on demand
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  Implemented Slack OAuth 2.0 with automatic channel discovery and engineered a noise suppression system that filters Jira changelogs by user activity signals, eliminating irrelevant ticket updates
+                </Typography>
+                <Typography component="li" variant="body2" paragraph>
+                  <strong>Tech:</strong> TypeScript, React, Atlassian Forge, Atlaskit, OpenAI API, Slack OAuth 2.0, GitHub API
+                </Typography>
+              </Box>
+            </Box>
             
             {/* Postmark - Unified Email Client */}
             <Box sx={{ mb: 4 }}>
@@ -227,28 +250,6 @@ const Resume = () => {
               </Box>
             </Box>
             
-            {/* Intelligent Traffic Management System */}
-            <Box>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                Intelligent Traffic Management System
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                <a href="https://github.com/piran777/Capstone" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                  GitHub Repository →
-                </a>
-              </Typography>
-              <Box component="ul" sx={{ mt: 1, pl: 2 }}>
-                <Typography component="li" variant="body2" paragraph>
-                  Built ML traffic prediction system using random forest classifier to accurately forecast intersection congestion patterns and optimize route planning
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  Developed Python heat map algorithm to identify high-traffic zones in London, Ontario, integrated with Google Maps API for real-time visualization
-                </Typography>
-                <Typography component="li" variant="body2" paragraph>
-                  <strong>Tech:</strong> Python, Pandas, Streamlit, Git
-                </Typography>
-              </Box>
-            </Box>
           </Box>
           
           <Box sx={{ mb: 5 }}>
@@ -287,7 +288,7 @@ const Resume = () => {
             <Divider sx={{ mb: 3 }} />
             
             <Typography variant="body1" paragraph>
-              <strong>Languages:</strong> JavaScript, TypeScript, Python, Ruby, Java, C/C++, C#
+              <strong>Languages:</strong> JavaScript, TypeScript, Python, Ruby, Java, C#, C/C++
             </Typography>
             <Typography variant="body1" paragraph>
               <strong>Frontend:</strong> React.js, React Native, HTML/CSS, Material-UI, SCSS, Next.js, Tailwind CSS
@@ -302,10 +303,10 @@ const Resume = () => {
               <strong>DevOps & Cloud:</strong> Docker, Kubernetes, AWS, GCP, GitLab, Vercel
             </Typography>
             <Typography variant="body1" paragraph>
-              <strong>Tools & Testing:</strong> Git, Cucumber, Selenium, RSpec, Jest, Jira/Confluence, Wireshark, Mininet, Honeybadger, Okta
+              <strong>Tools & Testing:</strong> Git, Cucumber, Selenium, RSpec, Jest, Jira/Confluence, Okta, Claude Code, Cursor, Copilot, Forge
             </Typography>
             <Typography variant="body1">
-              <strong>Libraries:</strong> Pandas, Streamlit, i18n, Redux, googleapis, next-auth
+              <strong>Libraries:</strong> OpenAI API, Pandas, i18n, Redux, googleapis
             </Typography>
           </Box>
         </MotionPaper>
