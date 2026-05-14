@@ -53,7 +53,7 @@ const projects = [
     ],
     technologies: ['TypeScript', 'React', 'Atlassian Forge', 'Atlaskit', 'OpenAI API', 'Slack OAuth 2.0', 'GitHub API'],
     videoUrl: 'https://www.youtube.com/embed/ES-rX_oDP_c',
-    githubUrl: 'https://github.com/piran777',
+    githubUrl: 'https://github.com/piran777/stadup-writer',
     liveUrl: 'https://marketplace.atlassian.com/apps/542311656/auto-standup-bot'
   },
   {
@@ -184,7 +184,7 @@ const Projects = () => {
   };
 
   return (
-    <Box component="main" sx={{ py: 10 }}>
+    <Box component="main" sx={{ py: { xs: 10, md: 12 } }}>
       <Container maxWidth="lg">
         <MotionBox 
           ref={titleRef}
@@ -194,17 +194,14 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
         >
           <Typography 
-            variant="h2" 
-            component="h1" 
-            gutterBottom
+            variant="h2" component="h1" gutterBottom
             sx={{ fontWeight: 700 }}
           >
             My Projects
           </Typography>
           <Typography 
-            variant="h6" 
-            color="text.secondary"
-            sx={{ maxWidth: 800, mx: 'auto' }}
+            variant="body1" color="text.secondary"
+            sx={{ maxWidth: 600, mx: 'auto' }}
           >
             A showcase of my technical work and passion projects across various technologies and domains.
           </Typography>
@@ -214,34 +211,36 @@ const Projects = () => {
           ref={projectsRef}
           initial={{ opacity: 0, y: 30 }}
           animate={projectsInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
         >
           <Box sx={{
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
-            gap: 4,
+            gap: 3,
           }}>
             {projects.map((project, index) => (
               <MotionCard
                 key={project.id}
                 sx={{
-                  height: 320,
+                  height: 340,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'flex-start',
-                  boxShadow: theme.shadows.small,
-                  borderRadius: 2,
                   overflow: 'hidden',
-                  transition: 'transform 0.3s, box-shadow 0.3s',
+                  backgroundColor: '#fff',
+                  transition: 'all 0.25s ease',
+                  cursor: 'pointer',
                   '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: theme.shadows.medium
-                  }
+                    transform: 'translateY(-4px)',
+                    boxShadow: theme.shadows[8],
+                    borderColor: theme.palette.primary.main,
+                  },
                 }}
+                onClick={() => handleOpenDialog(project)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={projectsInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
               >
                 {project.image ? (
                   <CardMedia
@@ -249,48 +248,45 @@ const Projects = () => {
                     image={project.image}
                     alt={project.title}
                     sx={{ 
-                      height: 100, 
+                      height: 110, 
                       width: '100%', 
                       objectFit: 'cover',
-                      objectPosition: project.id === 2 ? 'center top' : 'center center'
+                      objectPosition: project.id === 2 ? 'center top' : 'center center',
                     }}
                   />
                 ) : (
                   <Box sx={{ 
-                    height: 100, 
+                    height: 110, 
                     width: '100%', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
-                    background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`
+                    background: `linear-gradient(135deg, ${alpha(theme.palette.primary.main, 0.8)} 0%, ${alpha(theme.palette.secondary.main, 0.8)} 100%)`,
                   }}>
                     <SmartToyIcon sx={{ fontSize: 40, color: 'white', opacity: 0.9 }} />
                   </Box>
                 )}
-                <CardContent sx={{ flex: '1 1 0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', px: 1, py: 1, minHeight: 0 }}>
+                <CardContent sx={{ flex: '1 1 0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', px: 2, py: 2, minHeight: 0 }}>
                   <Typography
-                    variant="h6"
-                    component="h2"
+                    variant="h6" component="h2"
                     sx={{ 
                       fontWeight: 600, 
                       fontSize: '0.95rem', 
                       textAlign: 'center', 
-                      lineHeight: 1.2,
+                      lineHeight: 1.3,
                       display: '-webkit-box',
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: 'vertical',
                       overflow: 'hidden',
                       textOverflow: 'ellipsis',
-                      mb: 0.5,
-                      minHeight: 48,
-                      maxHeight: 48
+                      mb: 1,
+                      minHeight: 42,
                     }}
                   >
                     {project.title}
                   </Typography>
                   <Typography
-                    variant="body2"
-                    color="text.secondary"
+                    variant="body2" color="text.secondary"
                     sx={{
                       display: '-webkit-box',
                       WebkitLineClamp: 2,
@@ -298,49 +294,38 @@ const Projects = () => {
                       overflow: 'hidden',
                       textOverflow: 'ellipsis',
                       textAlign: 'center',
-                      minHeight: 36,
-                      maxHeight: 36,
-                      mb: 1
+                      mb: 1.5,
+                      fontSize: '0.83rem',
                     }}
                   >
                     {project.description}
                   </Typography>
-                  <Box sx={{ display: 'flex', flexWrap: 'nowrap', gap: 0.5, height: 24, overflow: 'hidden', justifyContent: 'center', alignItems: 'center', mb: 1 }}>
+                  <Box sx={{ display: 'flex', flexWrap: 'nowrap', gap: 0.75, overflow: 'hidden', justifyContent: 'center', alignItems: 'center' }}>
                     {project.technologies.slice(0, 2).map((tech) => (
-                      <Box
+                      <Chip
                         key={tech}
+                        label={tech}
+                        size="small"
+                        variant="outlined"
                         sx={{
-                          px: 1,
-                          py: 0.25,
-                          fontSize: '0.75rem',
-                          borderRadius: '999px',
-                          background: theme.palette.grey[200],
+                          fontSize: '0.72rem',
+                          height: 24,
+                          borderColor: theme.palette.divider,
                           color: theme.palette.text.secondary,
-                          fontWeight: 500,
-                          mr: 0.5,
-                          whiteSpace: 'nowrap',
-                          lineHeight: 1.5
                         }}
-                      >
-                        {tech}
-                      </Box>
+                      />
                     ))}
                     {project.technologies.length > 2 && (
-                      <Box
+                      <Chip
+                        label={`+${project.technologies.length - 2}`}
+                        size="small"
                         sx={{
-                          px: 1,
-                          py: 0.25,
-                          fontSize: '0.75rem',
-                          borderRadius: '999px',
-                          background: theme.palette.grey[300],
+                          fontSize: '0.72rem',
+                          height: 24,
+                          backgroundColor: theme.palette.background.paper,
                           color: theme.palette.text.secondary,
-                          fontWeight: 500,
-                          whiteSpace: 'nowrap',
-                          lineHeight: 1.5
                         }}
-                      >
-                        {`+${project.technologies.length - 2}`}
-                      </Box>
+                      />
                     )}
                   </Box>
                 </CardContent>
@@ -348,7 +333,11 @@ const Projects = () => {
                   <Button
                     size="small"
                     startIcon={<CodeIcon />}
-                    onClick={() => handleOpenDialog(project)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleOpenDialog(project);
+                    }}
+                    sx={{ fontWeight: 500 }}
                   >
                     Learn More
                   </Button>
@@ -359,6 +348,7 @@ const Projects = () => {
         </MotionBox>
       </Container>
 
+      {/* Project Detail Dialog */}
       <Dialog
         open={dialogOpen}
         onClose={handleCloseDialog}
@@ -366,9 +356,9 @@ const Projects = () => {
         fullWidth
         sx={{ 
           '& .MuiDialog-paper': { 
-            borderRadius: 2,
-            overflow: 'hidden'
-          }
+            borderRadius: 3,
+            overflow: 'hidden',
+          },
         }}
       >
         {selectedProject && (
@@ -377,8 +367,8 @@ const Projects = () => {
               position: 'relative', 
               height: 300, 
               overflow: 'hidden',
-              backgroundColor: alpha(theme.palette.primary.main, 0.1),
-              cursor: selectedProject.image ? 'pointer' : 'default'
+              backgroundColor: alpha(theme.palette.primary.main, 0.05),
+              cursor: selectedProject.image ? 'pointer' : 'default',
             }}>
               {selectedProject.image ? (
                 <img 
@@ -399,7 +389,7 @@ const Projects = () => {
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
-                  background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`
+                  background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
                 }}>
                   <SmartToyIcon sx={{ fontSize: 80, color: 'white', opacity: 0.9 }} />
                 </Box>
@@ -408,23 +398,22 @@ const Projects = () => {
                 onClick={handleCloseDialog}
                 sx={{
                   position: 'absolute',
-                  top: 8,
-                  right: 8,
+                  top: 12,
+                  right: 12,
                   color: 'white',
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  '&:hover': {
-                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                  }
+                  backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                  backdropFilter: 'blur(4px)',
+                  '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.6)' },
                 }}
               >
                 <CloseIcon />
               </IconButton>
             </Box>
-            <DialogContent sx={{ px: 4, py: 3 }}>
+            <DialogContent sx={{ px: { xs: 3, md: 4 }, py: 3 }}>
               <Typography variant="h4" gutterBottom sx={{ fontWeight: 700, color: 'primary.main' }}>
                 {selectedProject.title}
               </Typography>
-              <Typography variant="subtitle1" paragraph>
+              <Typography variant="body1" paragraph sx={{ color: 'text.secondary' }}>
                 {selectedProject.description}
               </Typography>
               
@@ -434,7 +423,7 @@ const Projects = () => {
               <List sx={{ pl: 2, mb: 3 }}>
                 {selectedProject.details.map((detail, idx) => (
                   <ListItem key={idx} sx={{ display: 'list-item', py: 0.5 }}>
-                    <ListItemText primary={detail} />
+                    <ListItemText primary={detail} primaryTypographyProps={{ color: 'text.secondary', variant: 'body2' }} />
                   </ListItem>
                 ))}
               </List>
@@ -448,8 +437,8 @@ const Projects = () => {
                     key={tech} 
                     label={tech} 
                     variant="outlined"
-                    color="primary"
-                    sx={{ mb: 1 }}
+                    size="small"
+                    sx={{ borderColor: theme.palette.divider }}
                   />
                 ))}
               </Box>
@@ -459,7 +448,7 @@ const Projects = () => {
                   <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
                     Demo Video
                   </Typography>
-                  <Box sx={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 1 }}>
+                  <Box sx={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 2 }}>
                     <iframe
                       style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
                       src={selectedProject.videoUrl}
@@ -471,14 +460,14 @@ const Projects = () => {
                 </Box>
               )}
             </DialogContent>
-            <DialogActions sx={{ px: 3, pb: 3 }}>
+            <DialogActions sx={{ px: 3, pb: 3, gap: 1 }}>
               {selectedProject.githubUrl && (
                 <Button 
-                  variant="outlined" 
-                  color="primary" 
+                  variant="outlined"
                   startIcon={<GitHubIcon />}
                   href={selectedProject.githubUrl}
                   target="_blank"
+                  sx={{ borderColor: theme.palette.divider, color: theme.palette.text.primary }}
                 >
                   View Source
                 </Button>
@@ -494,7 +483,7 @@ const Projects = () => {
                   Live Demo
                 </Button>
               )}
-              <Button onClick={handleCloseDialog} color="primary">
+              <Button onClick={handleCloseDialog} sx={{ color: 'text.secondary' }}>
                 Close
               </Button>
             </DialogActions>
@@ -512,8 +501,8 @@ const Projects = () => {
           '& .MuiDialog-paper': { 
             backgroundColor: 'transparent',
             boxShadow: 'none',
-            overflow: 'hidden'
-          }
+            overflow: 'hidden',
+          },
         }}
       >
         {selectedImage && (
@@ -522,7 +511,7 @@ const Projects = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            p: 2
+            p: 2,
           }}>
             <img 
               src={selectedImage.src} 
@@ -531,8 +520,8 @@ const Projects = () => {
                 maxWidth: '100%', 
                 maxHeight: '90vh', 
                 objectFit: 'contain',
-                borderRadius: '8px',
-                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)'
+                borderRadius: '12px',
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
               }}
             />
             <IconButton
@@ -542,10 +531,9 @@ const Projects = () => {
                 top: 16,
                 right: 16,
                 color: 'white',
-                backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                '&:hover': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.9)',
-                }
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                backdropFilter: 'blur(4px)',
+                '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
               }}
             >
               <CloseIcon />

@@ -19,7 +19,6 @@ import {
 import { styled } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
-import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import MailIcon from '@mui/icons-material/Mail';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -38,30 +37,42 @@ function HideOnScroll(props) {
 }
 
 const StyledNavLink = styled(Button)(({ theme, active }) => ({
-  color: 'white',
-  marginLeft: theme.spacing(2),
+  color: active ? theme.palette.primary.main : theme.palette.text.primary,
+  marginLeft: theme.spacing(1),
+  fontWeight: active ? 600 : 500,
+  fontSize: '0.9rem',
   position: 'relative',
+  padding: '6px 14px',
+  borderRadius: 8,
+  transition: 'all 0.2s ease',
   '&::after': {
     content: '""',
     position: 'absolute',
-    width: active ? '100%' : '0%',
+    width: active ? '60%' : '0%',
     height: '2px',
-    bottom: 0,
-    left: 0,
-    backgroundColor: theme.palette.secondary.main,
-    transition: 'width 0.3s ease-in-out'
+    bottom: 2,
+    left: '50%',
+    transform: 'translateX(-50%)',
+    backgroundColor: theme.palette.primary.main,
+    transition: 'width 0.25s ease',
+    borderRadius: 1,
+  },
+  '&:hover': {
+    backgroundColor: 'rgba(37, 99, 235, 0.06)',
   },
   '&:hover::after': {
-    width: '100%'
-  }
+    width: '60%',
+  },
 }));
 
 const StyledSocialIcon = styled(IconButton)(({ theme }) => ({
-  color: 'white',
-  marginLeft: theme.spacing(1),
+  color: theme.palette.text.secondary,
+  marginLeft: theme.spacing(0.5),
+  transition: 'color 0.2s ease',
   '&:hover': {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)'
-  }
+    color: theme.palette.primary.main,
+    backgroundColor: 'rgba(37, 99, 235, 0.06)',
+  },
 }));
 
 const Navbar = () => {
@@ -89,12 +100,20 @@ const Navbar = () => {
 
   const drawerContent = (
     <Box
-      sx={{ width: 250 }}
+      sx={{ width: 280, pt: 2 }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      <List>
+      <Box sx={{ px: 3, pb: 2, mb: 1, borderBottom: '1px solid', borderColor: 'divider' }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, color: 'text.primary' }}>
+          Piran Aminullah
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Software Engineer
+        </Typography>
+      </Box>
+      <List sx={{ px: 1 }}>
         {navLinks.map((link) => (
           <ListItem 
             button 
@@ -102,14 +121,22 @@ const Navbar = () => {
             to={link.path} 
             key={link.name}
             sx={{ 
-              backgroundColor: isActive(link.path) ? 'rgba(25, 118, 210, 0.1)' : 'transparent',
-              borderLeft: isActive(link.path) ? '4px solid #1976d2' : '4px solid transparent'
+              borderRadius: 2,
+              mb: 0.5,
+              backgroundColor: isActive(link.path) ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
+              color: isActive(link.path) ? 'primary.main' : 'text.primary',
+              '&:hover': {
+                backgroundColor: 'rgba(37, 99, 235, 0.06)',
+              },
             }}
           >
-            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ mr: 2, display: 'flex', alignItems: 'center', color: 'inherit' }}>
               {link.icon}
             </Box>
-            <ListItemText primary={link.name} />
+            <ListItemText 
+              primary={link.name} 
+              primaryTypographyProps={{ fontWeight: isActive(link.path) ? 600 : 500 }}
+            />
           </ListItem>
         ))}
       </List>
@@ -119,32 +146,49 @@ const Navbar = () => {
   return (
     <>
       <HideOnScroll>
-        <AppBar position="fixed" color="primary" elevation={2}>
+        <AppBar 
+          position="fixed" 
+          elevation={0}
+          sx={{ 
+            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+            backdropFilter: 'blur(12px)',
+            borderBottom: '1px solid',
+            borderColor: 'divider',
+          }}
+        >
           <Container maxWidth="lg">
-            <Toolbar sx={{ justifyContent: 'space-between' }}>
-              <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
+            <Toolbar sx={{ justifyContent: 'space-between', py: 0.5 }}>
+              <Typography 
+                variant="h6" 
+                component={Link}
+                to="/About-Me"
+                sx={{ 
+                  fontWeight: 700, 
+                  color: 'text.primary',
+                  textDecoration: 'none',
+                  letterSpacing: '-0.01em',
+                }}
+              >
                 Piran Aminullah
               </Typography>
               
               {isMobile ? (
-                <>
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <StyledSocialIcon aria-label="github" href="https://github.com/piran777" target="_blank" size="small">
-                      <GitHubIcon />
-                    </StyledSocialIcon>
-                    <StyledSocialIcon aria-label="linkedin" href="https://www.linkedin.com/in/piran-aminullah-a57221220/" target="_blank" size="small">
-                      <LinkedInIcon />
-                    </StyledSocialIcon>
-                    <IconButton
-                      edge="end"
-                      color="inherit"
-                      aria-label="menu"
-                      onClick={toggleDrawer(true)}
-                    >
-                      <MenuIcon />
-                    </IconButton>
-                  </Box>
-                </>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <StyledSocialIcon aria-label="github" href="https://github.com/piran777" target="_blank" size="small">
+                    <GitHubIcon fontSize="small" />
+                  </StyledSocialIcon>
+                  <StyledSocialIcon aria-label="linkedin" href="https://www.linkedin.com/in/piran-aminullah-a57221220/" target="_blank" size="small">
+                    <LinkedInIcon fontSize="small" />
+                  </StyledSocialIcon>
+                  <IconButton
+                    edge="end"
+                    aria-label="menu"
+                    onClick={toggleDrawer(true)}
+                    sx={{ color: 'text.primary', ml: 0.5 }}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                </Box>
               ) : (
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   {navLinks.map((link) => (
@@ -153,17 +197,16 @@ const Navbar = () => {
                       component={Link}
                       to={link.path}
                       active={isActive(link.path) ? 1 : 0}
-                      startIcon={link.icon}
                     >
                       {link.name}
                     </StyledNavLink>
                   ))}
-                  <Box sx={{ ml: 2, display: 'flex' }}>
+                  <Box sx={{ ml: 2, pl: 2, borderLeft: '1px solid', borderColor: 'divider', display: 'flex' }}>
                     <StyledSocialIcon aria-label="github" href="https://github.com/piran777" target="_blank" size="small">
-                      <GitHubIcon />
+                      <GitHubIcon fontSize="small" />
                     </StyledSocialIcon>
                     <StyledSocialIcon aria-label="linkedin" href="https://www.linkedin.com/in/piran-aminullah-a57221220/" target="_blank" size="small">
-                      <LinkedInIcon />
+                      <LinkedInIcon fontSize="small" />
                     </StyledSocialIcon>
                   </Box>
                 </Box>

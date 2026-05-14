@@ -27,7 +27,7 @@ const Contact = () => {
   const [contentRef, contentInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <Box component="main" sx={{ py: 10 }}>
+    <Box component="main" sx={{ py: { xs: 10, md: 12 } }}>
       <Container maxWidth="md">
         <MotionBox 
           ref={titleRef}
@@ -37,17 +37,14 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <Typography 
-            variant="h2" 
-            component="h1" 
-            gutterBottom
+            variant="h2" component="h1" gutterBottom
             sx={{ fontWeight: 700 }}
           >
             Get In Touch
           </Typography>
           <Typography 
-            variant="h6" 
-            color="text.secondary"
-            sx={{ maxWidth: 700, mx: 'auto', mb: 2 }}
+            variant="body1" color="text.secondary"
+            sx={{ maxWidth: 550, mx: 'auto' }}
           >
             I'm always interested in new opportunities, collaborations, or just a friendly chat.
             Feel free to connect with me through any of the channels below.
@@ -56,42 +53,44 @@ const Contact = () => {
 
         <MotionPaper
           ref={contentRef}
-          elevation={2}
+          elevation={0}
           sx={{ 
-            p: 5, 
-            borderRadius: 2,
+            p: { xs: 4, md: 5 },
             maxWidth: 800,
             mx: 'auto',
-            backgroundColor: theme.palette.background.paper
+            backgroundColor: '#fff',
+            border: `1px solid ${theme.palette.divider}`,
           }}
           initial={{ opacity: 0, y: 30 }}
           animate={contentInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <Grid container spacing={4}>
+          <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box>
-                <Typography variant="h5" sx={{ mb: 4, fontWeight: 600, color: 'primary.main' }}>
+                <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
                   Contact Information
                 </Typography>
                 
                 <Box sx={{ mb: 4 }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
                     <Box sx={{ 
-                      mr: 2.5, 
-                      backgroundColor: 'primary.main', 
-                      color: 'white',
-                      width: 48,
-                      height: 48,
-                      borderRadius: '50%',
+                      mr: 2, 
+                      backgroundColor: theme.palette.background.paper,
+                      border: `1px solid ${theme.palette.divider}`,
+                      color: theme.palette.primary.main,
+                      width: 44,
+                      height: 44,
+                      borderRadius: 2,
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: 'center'
+                      justifyContent: 'center',
+                      flexShrink: 0,
                     }}>
-                      <EmailIcon fontSize="medium" />
+                      <EmailIcon fontSize="small" />
                     </Box>
                     <Box>
-                      <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
+                      <Typography variant="body2" color="text.secondary" sx={{ mb: 0.25, fontSize: '0.8rem' }}>
                         Email
                       </Typography>
                       <Typography variant="body1" sx={{ fontWeight: 500 }}>
@@ -102,20 +101,22 @@ const Contact = () => {
                   
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <Box sx={{ 
-                      mr: 2.5, 
-                      backgroundColor: 'primary.main', 
-                      color: 'white',
-                      width: 48,
-                      height: 48,
-                      borderRadius: '50%',
+                      mr: 2, 
+                      backgroundColor: theme.palette.background.paper,
+                      border: `1px solid ${theme.palette.divider}`,
+                      color: theme.palette.primary.main,
+                      width: 44,
+                      height: 44,
+                      borderRadius: 2,
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: 'center'
+                      justifyContent: 'center',
+                      flexShrink: 0,
                     }}>
-                      <LocationIcon fontSize="medium" />
+                      <LocationIcon fontSize="small" />
                     </Box>
                     <Box>
-                      <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
+                      <Typography variant="body2" color="text.secondary" sx={{ mb: 0.25, fontSize: '0.8rem' }}>
                         Location
                       </Typography>
                       <Typography variant="body1" sx={{ fontWeight: 500 }}>
@@ -129,35 +130,54 @@ const Contact = () => {
             
             <Grid item xs={12} md={6}>
               <Box>
-                <Typography variant="h5" sx={{ mb: 4, fontWeight: 600, color: 'primary.main' }}>
+                <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
                   Social Profiles
                 </Typography>
                 
                 <Box sx={{ mb: 3 }}>
                   <Button
                     variant="outlined"
-                    color="primary"
                     fullWidth
                     size="large"
                     startIcon={<LinkedInIcon />}
                     href="https://www.linkedin.com/in/piran-aminullah-a57221220/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    sx={{ py: 1.5, mb: 2.5, justifyContent: 'flex-start', pl: 2 }}
+                    sx={{ 
+                      py: 1.5, 
+                      mb: 2, 
+                      justifyContent: 'flex-start', 
+                      pl: 2,
+                      borderColor: theme.palette.divider,
+                      color: theme.palette.text.primary,
+                      '&:hover': {
+                        borderColor: theme.palette.primary.main,
+                        backgroundColor: 'rgba(37, 99, 235, 0.04)',
+                      },
+                    }}
                   >
                     LinkedIn Profile
                   </Button>
                   
                   <Button
                     variant="outlined"
-                    color="primary"
                     fullWidth
                     size="large"
                     startIcon={<GitHubIcon />}
                     href="https://github.com/piran777"
                     target="_blank"
                     rel="noopener noreferrer"
-                    sx={{ py: 1.5, justifyContent: 'flex-start', pl: 2 }}
+                    sx={{ 
+                      py: 1.5, 
+                      justifyContent: 'flex-start', 
+                      pl: 2,
+                      borderColor: theme.palette.divider,
+                      color: theme.palette.text.primary,
+                      '&:hover': {
+                        borderColor: theme.palette.primary.main,
+                        backgroundColor: 'rgba(37, 99, 235, 0.04)',
+                      },
+                    }}
                   >
                     GitHub Profile
                   </Button>
@@ -167,7 +187,7 @@ const Contact = () => {
           </Grid>
           
           <Box sx={{ mt: 4, pt: 4, borderTop: `1px solid ${theme.palette.divider}`, textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ mb: 2, fontWeight: 500 }}>
+            <Typography variant="body1" sx={{ mb: 1, fontWeight: 500, color: 'text.primary' }}>
               Thank you for your interest in my work!
             </Typography>
             <Typography variant="body2" color="text.secondary">
