@@ -21,32 +21,37 @@ const skills = [
   { name: 'HTML/CSS', category: 'frontend' },
   { name: 'Material-UI', category: 'frontend' },
   { name: 'SCSS', category: 'frontend' },
+  { name: 'Next.js', category: 'frontend' },
+  { name: 'Tailwind CSS', category: 'frontend' },
   { name: 'Node.js/Express', category: 'backend' },
   { name: 'Ruby on Rails 6/7', category: 'backend' },
   { name: 'Spring Boot', category: 'backend' },
   { name: 'RESTful APIs', category: 'backend' },
+  { name: 'Prisma', category: 'backend' },
+  { name: 'NextAuth.js', category: 'backend' },
   { name: 'MySQL', category: 'database' },
   { name: 'MongoDB', category: 'database' },
   { name: 'Redis', category: 'database' },
+  { name: 'PostgreSQL', category: 'database' },
   { name: 'Docker', category: 'devops' },
   { name: 'Kubernetes', category: 'devops' },
   { name: 'AWS', category: 'cloud' },
   { name: 'GCP', category: 'cloud' },
   { name: 'GitLab', category: 'tool' },
+  { name: 'Vercel', category: 'tool' },
   { name: 'Git', category: 'tool' },
   { name: 'Cucumber', category: 'testing' },
-  { name: 'Selenium', category: 'testing' },
   { name: 'RSpec', category: 'testing' },
   { name: 'Jest', category: 'testing' },
   { name: 'Jira/Confluence', category: 'tool' },
-  { name: 'Wireshark', category: 'tool' },
-  { name: 'Mininet', category: 'tool' },
-  { name: 'Honeybadger', category: 'tool' },
   { name: 'Okta', category: 'tool' },
+  { name: 'Forge', category: 'tool' },
+  { name: 'OpenAI API', category: 'library' },
   { name: 'Pandas', category: 'library' },
-  { name: 'Streamlit', category: 'library' },
   { name: 'i18n', category: 'library' },
   { name: 'Redux', category: 'library' },
+  { name: 'Google APIs', category: 'library' },
+  { name: 'Microsoft Graph API', category: 'library' },
 ];
 
 const MotionBox = motion(Box);
@@ -212,7 +217,7 @@ const Home = () => {
           </Typography>
           <Card sx={{ p: 3, mb: 5, borderLeft: '4px solid', borderLeftColor: 'primary.main', boxShadow: theme.shadows.small }}>
             <Typography variant="h6" sx={{ color: 'primary.main', fontWeight: 600 }}>
-              Junior Software Engineer at hyperPad
+              Software Engineer at hyperPad
             </Typography>
             <Typography variant="subtitle2" color="text.secondary" gutterBottom>
               Jan 2025 - Current • London, ON
